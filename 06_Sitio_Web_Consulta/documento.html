@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2563eb">
+  <title>Documento | NTICx 4° Año</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('nticx-theme') || 'light');</script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header-glass"><div class="header-container"><a href="./" class="brand"><div class="brand-badge">NTICx</div><div class="brand-info"><h1>Lectura de materiales</h1><p>EES N° 33 • 4° Año</p></div></a><div class="header-controls"><button id="theme-toggle-btn" class="btn-icon" type="button" aria-pressed="false" title="Cambiar tema">🌙 Modo Oscuro</button><button class="btn-icon" type="button" onclick="window.print()">🖨️ Imprimir / Guardar PDF</button><a href="calendario.html" class="btn-icon">🗓️ Calendario</a><a href="./" class="btn-icon">⌂ Sitio principal</a><a href="materiales.html" class="btn-icon">← Materiales</a></div></div></header>
+  <main class="main-container document-page">
+    <p><a class="back-link" href="materiales.html">← Volver a materiales</a></p>
+    <article id="documento" class="document-viewer" aria-live="polite"><p class="loading">Cargando documento…</p></article>
+  </main>
+  <script src="theme.js"></script>
+  <script src="documento.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Materiales de consulta de NTICx 4° Año: fichas, guías, planificación y evaluaciones.">
+  <meta name="theme-color" content="#2563eb">
+  <title>Materiales | NTICx 4° Año</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('nticx-theme') || 'light');</script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header-glass">
+    <div class="header-container">
+      <a href="./" class="brand" aria-label="Volver a la plataforma NTICx">
+        <div class="brand-badge">NTICx</div>
+        <div class="brand-info"><h1>Materiales de consulta</h1><p>4° 1° Secundaria • EES N° 33</p></div>
+      </a>
+      <div class="header-controls"><button id="theme-toggle-btn" class="btn-icon" type="button" aria-pressed="false" title="Cambiar tema">🌙 Modo Oscuro</button><a href="./" class="btn-icon">← Volver al sitio</a></div>
+    </div>
+  </header>
+
+  <main class="main-container resource-page">
+    <section class="resource-intro">
+      <p class="eyebrow">CICLO LECTIVO 2026</p>
+      <h2>Guías, planificación, fichas y evaluaciones</h2>
+      <p>Elegí un material para leerlo en el navegador. Los documentos se mantienen en el proyecto completo y se presentan aquí en un formato más cómodo para la consulta.</p>
+    </section>
+
+    <section class="resource-section" aria-labelledby="documentos-estudiantes">
+      <div class="section-heading"><div><p class="audience-label student">PARA ESTUDIANTES</p><h2 id="documentos-estudiantes">Materiales para aprender y trabajar</h2></div><p>Estos materiales se pueden leer, imprimir o guardar como PDF.</p></div>
+      <div class="resource-grid">
+        <a class="resource-card" href="documento.html?archivo=03_Guia_Estudiantes/Manual_Estudiante_NTICX.md"><span>📖</span><strong>Manual del estudiante</strong><small>Contenidos, módulos y glosario.</small></a>
+        <a class="resource-card" href="documento.html?archivo=04_Cuadernillo_Actividades/Cuadernillo_Actividades_38_Clases.md"><span>📝</span><strong>Cuadernillo anual</strong><small>Las 38 fichas de actividades.</small></a>
+      </div>
+    </section>
+
+    <section class="resource-section" aria-labelledby="documentos-docentes">
+      <div class="section-heading"><div><p class="audience-label teacher">USO DOCENTE</p><h2 id="documentos-docentes">Planificación y seguimiento</h2></div><p>Incluye orientaciones pedagógicas y documentos de trabajo docente.</p></div>
+      <div class="resource-grid">
+        <a class="resource-card" href="documento.html?archivo=02_Guia_Docente/Guia_Docente_NTICX.md"><span>👨‍🏫</span><strong>Guía docente</strong><small>Orientaciones didácticas y evaluación.</small></a>
+        <a class="resource-card" href="documento.html?archivo=01_Planificacion_y_Cronograma/Planificacion_Anual_NTICX_2026_Actualizada.md"><span>🗓️</span><strong>Planificación anual</strong><small>Propuesta curricular actualizada.</small></a>
+        <a class="resource-card" href="documento.html?archivo=01_Planificacion_y_Cronograma/Cronograma_Maestro_38_Clases.md"><span>📅</span><strong>Cronograma maestro</strong><small>Las 38 clases del año.</small></a>
+      </div>
+    </section>
+
+    <section class="resource-section" aria-labelledby="evaluaciones">
+      <div class="section-heading"><div><p class="audience-label student">PARA ESTUDIANTES</p><h2 id="evaluaciones">Evaluaciones y proyectos</h2></div><p>Consignas, criterios y rúbricas de entrega.</p></div>
+      <div id="evaluaciones-estudiantes" class="resource-list" aria-live="polite"></div>
+      <div class="teacher-panel">
+        <p class="audience-label teacher">USO DOCENTE</p>
+        <h3>Instrumentos con guía de corrección</h3>
+        <p>La versión docente de la evaluación trimestral incluye respuestas clave y criterios de corrección.</p>
+        <div id="evaluaciones-docente" class="resource-list" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="primer-trimestre" class="resource-section" aria-labelledby="titulo-primer-trimestre">
+      <div class="section-heading"><div><p class="audience-label student">PARA ESTUDIANTES</p><h2 id="titulo-primer-trimestre">Fichas · 1° trimestre</h2></div><p>Elegí una ficha por su tema y número.</p></div>
+      <div id="fichas-1" class="resource-list" aria-live="polite"></div>
+    </section>
+    <section id="segundo-trimestre" class="resource-section" aria-labelledby="titulo-segundo-trimestre">
+      <div class="section-heading"><div><p class="audience-label student">PARA ESTUDIANTES</p><h2 id="titulo-segundo-trimestre">Fichas · 2° trimestre</h2></div><p>Elegí una ficha por su tema y número.</p></div>
+      <div id="fichas-2" class="resource-list" aria-live="polite"></div>
+    </section>
+    <section id="tercer-trimestre" class="resource-section" aria-labelledby="titulo-tercer-trimestre">
+      <div class="section-heading"><div><p class="audience-label student">PARA ESTUDIANTES</p><h2 id="titulo-tercer-trimestre">Fichas · 3° trimestre</h2></div><p>Elegí una ficha por su tema y número.</p></div>
+      <div id="fichas-3" class="resource-list" aria-live="polite"></div>
+    </section>
+
+    <section class="resource-section" aria-labelledby="referencias">
+      <h2 id="referencias">Bibliografía y diseño curricular</h2>
+      <div class="resource-grid">
+        <a class="resource-card" href="../Diseño_Curricular/tic_4_final_web.pdf" target="_blank" rel="noopener noreferrer"><span>📑</span><strong>Diseño curricular para ES4</strong><small>PDF · se abre en una pestaña nueva.</small></a>
+        <a class="resource-card" href="../Bibliografía/ntix_cropped.pdf" target="_blank" rel="noopener noreferrer"><span>📚</span><strong>Bibliografía de NTICx</strong><small>PDF · se abre en una pestaña nueva.</small></a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><p><strong>EES N° 33 “16 de septiembre” • José C. Paz</strong></p><p style="margin-top:4px">NTICx 4° 1° • Ciclo lectivo 2026</p></footer>
+  <script src="theme.js"></script>
+  <script src="materiales.js"></script>
+</body>
+</html>

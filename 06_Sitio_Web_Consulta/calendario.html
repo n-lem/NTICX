@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Calendario anual 2026 para la planificación de NTICx.">
+  <meta name="theme-color" content="#2563eb">
+  <title>Calendario 2026 | NTICx 4° Año</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('nticx-theme') || 'light');</script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header-glass">
+    <div class="header-container">
+      <a href="./" class="brand" aria-label="Volver a la plataforma NTICx"><div class="brand-badge">NTICx</div><div class="brand-info"><h1>Calendario anual 2026</h1><p>Planificación y consulta docente</p></div></a>
+      <div class="header-controls"><button id="theme-toggle-btn" class="btn-icon" type="button" aria-pressed="false" title="Cambiar tema">🌙 Modo Oscuro</button><a href="./" class="btn-icon">← Volver al sitio</a></div>
+    </div>
+  </header>
+  <main class="main-container calendar-page">
+    <section class="resource-intro">
+      <p class="eyebrow">CICLO LECTIVO 2026</p>
+      <h2>Calendario anual</h2>
+      <p>Vista de referencia para organizar clases, actividades y evaluaciones en la Provincia de Buenos Aires. Se destacan feriados nacionales, días turísticos y los hitos del ciclo lectivo.</p>
+    </section>
+    <section class="calendar-info" aria-label="Hitos del ciclo lectivo 2026">
+      <div class="calendar-period first"><strong>1° cuatrimestre</strong><span>2 de marzo al 17 de julio</span></div>
+      <div class="calendar-period second"><strong>2° cuatrimestre</strong><span>3 de agosto al 22 de diciembre</span></div>
+      <div class="calendar-period recess"><strong>Receso invernal</strong><span>20 al 31 de julio</span></div>
+    </section>
+    <p class="calendar-legend"><span class="legend-item holiday"></span> Feriado o día turístico <span class="legend-item period-start"></span> Inicio de cuatrimestre <span class="legend-item period-end"></span> Fin de cuatrimestre</p>
+    <div id="calendar-grid" class="calendar-grid" aria-label="Calendario del año 2026"></div>
+    <p class="calendar-source">Fechas escolares según el <a href="https://www.argentina.gob.ar/capital-humano/educacion/calendario-escolar-2026" target="_blank" rel="noopener noreferrer">Calendario Escolar 2026</a> y feriados según <a href="https://www.argentina.gob.ar/feriados" target="_blank" rel="noopener noreferrer">Argentina.gob.ar</a>. Los días no laborables por motivos religiosos no se incluyen porque aplican solo a quienes los observan.</p>
+  </main>
+  <footer class="site-footer"><p><strong>EES N° 33 “16 de septiembre” • José C. Paz</strong></p><p style="margin-top:4px">NTICx 4° 1° • Ciclo lectivo 2026</p></footer>
+  <script src="theme.js"></script>
+  <script src="calendario.js"></script>
+</body>
+</html>

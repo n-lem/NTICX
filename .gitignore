@@ -1,0 +1,9 @@
+# Archivos binarios pesados que superan el límite de GitHub (100MB) o bibliografía de consulta externa
+Bibliografía/*.pdf
+
+# Archivos de sistema y temporales
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+scratch/
