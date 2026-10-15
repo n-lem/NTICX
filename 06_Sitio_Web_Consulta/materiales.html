@@ -3,82 +3,268 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Materiales de consulta de NTICx 4° Año: fichas, guías, planificación y evaluaciones.">
+  <meta name="description" content="Materiales de consulta de NTICx 4° Año: fichas de actividades, guías, planificación y evaluaciones. EES N° 33 '16 de septiembre'.">
   <meta name="theme-color" content="#2563eb">
-  <title>Materiales | NTICx 4° Año</title>
+  <title>Materiales de Consulta | NTICx 4° Año • EES N° 33</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('nticx-theme') || 'light');</script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- HEADER UNIFICADO -->
   <header class="header-glass">
     <div class="header-container">
-      <a href="./" class="brand" aria-label="Volver a la plataforma NTICx">
+      <a href="./" class="brand" aria-label="Ir al inicio de la plataforma NTICx">
         <div class="brand-badge">NTICx</div>
-        <div class="brand-info"><h1>Materiales de consulta</h1><p>4° 1° Secundaria • EES N° 33</p></div>
+        <div class="brand-info">
+          <h1>EES N° 33 “16 de septiembre”</h1>
+          <p>4° 1° Secundaria • José C. Paz • Prof. Nahuel Lemos</p>
+        </div>
       </a>
-      <div class="header-controls"><button id="theme-toggle-btn" class="btn-icon" type="button" aria-pressed="false" title="Cambiar tema">🌙 Modo Oscuro</button><a href="./" class="btn-icon">← Volver al sitio</a></div>
+
+      <nav class="header-nav" aria-label="Navegación principal">
+        <a href="./" class="nav-link" id="nav-link-inicio">
+          <span class="nav-icon">⌂</span> <span class="nav-text">Inicio</span>
+        </a>
+        <a href="materiales.html" class="nav-link active" id="nav-link-materiales">
+          <span class="nav-icon">📚</span> <span class="nav-text">Materiales</span>
+        </a>
+        <a href="calendario.html" class="nav-link" id="nav-link-calendario">
+          <span class="nav-icon">🗓️</span> <span class="nav-text">Calendario</span>
+        </a>
+      </nav>
+
+      <div class="header-controls">
+        <button id="theme-toggle-btn" class="btn-icon" type="button" title="Cambiar tema" aria-pressed="false">
+          <span class="theme-icon">🌙</span> <span class="control-text">Modo Oscuro</span>
+        </button>
+        <button onclick="window.print()" class="btn-icon" type="button" title="Imprimir pantalla">
+          <span>🖨️</span> <span class="control-text">Imprimir</span>
+        </button>
+        <button id="lock-session-btn" class="btn-icon" type="button" title="Bloquear sesión">
+          <span>🔒</span> <span class="control-text">Bloquear</span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main class="main-container resource-page">
-    <section class="resource-intro">
-      <p class="eyebrow">CICLO LECTIVO 2026</p>
-      <h2>Guías, planificación, fichas y evaluaciones</h2>
-      <p>Elegí un material para leerlo en el navegador. Los documentos se mantienen en el proyecto completo y se presentan aquí en un formato más cómodo para la consulta.</p>
+    <!-- HERO INTRO CON BREADCRUMB -->
+    <section class="page-intro-banner">
+      <nav class="page-breadcrumb" aria-label="Ubicación">
+        <a href="./">Inicio</a>
+        <span class="sep">›</span>
+        <span class="current">Materiales de Consulta</span>
+      </nav>
+      <h2>Guías, Planificación, Fichas y Evaluaciones</h2>
+      <p>Biblioteca pedagógica completa de NTICx para 4° 1° (Ciclo Lectivo 2026). Todos los documentos pueden leerse en línea, imprimirse o descargarse como PDF con formato optimizado.</p>
     </section>
 
-    <section class="resource-section" aria-labelledby="documentos-estudiantes">
-      <div class="section-heading"><div><p class="audience-label student">PARA ESTUDIANTES</p><h2 id="documentos-estudiantes">Materiales para aprender y trabajar</h2></div><p>Estos materiales se pueden leer, imprimir o guardar como PDF.</p></div>
-      <div class="resource-grid">
-        <a class="resource-card" href="documento.html?archivo=03_Guia_Estudiantes/Manual_Estudiante_NTICX.md"><span>📖</span><strong>Manual del estudiante</strong><small>Contenidos, módulos y glosario.</small></a>
-        <a class="resource-card" href="documento.html?archivo=04_Cuadernillo_Actividades/Cuadernillo_Actividades_38_Clases.md"><span>📝</span><strong>Cuadernillo anual</strong><small>Las 38 fichas de actividades.</small></a>
+    <!-- BARRA INTERACTIVA DE BÚSQUEDA Y FILTRADO -->
+    <section class="materials-toolbar" aria-label="Búsqueda y filtrado de materiales">
+      <div class="materials-search-row">
+        <input type="search" id="materials-search" class="materials-search-input" placeholder="🔍 Buscar ficha por tema, palabra clave o número (ej. binario, von neumann, grooming, ficha 12)..." aria-label="Buscar materiales">
+      </div>
+      <div class="materials-filter-chips" role="group" aria-label="Filtro de materiales por categoría">
+        <button type="button" class="filter-chip-btn active" data-filter="todos">Todos los materiales</button>
+        <button type="button" class="filter-chip-btn" data-filter="t1">1° Trimestre (Fichas 1 a 12)</button>
+        <button type="button" class="filter-chip-btn" data-filter="t2">2° Trimestre (Fichas 13 a 25)</button>
+        <button type="button" class="filter-chip-btn" data-filter="t3">3° Trimestre (Fichas 26 a 38)</button>
+        <button type="button" class="filter-chip-btn" data-filter="evaluaciones">Evaluaciones</button>
+        <button type="button" class="filter-chip-btn" data-filter="guias">Guías y Planificación</button>
       </div>
     </section>
 
-    <section class="resource-section" aria-labelledby="documentos-docentes">
-      <div class="section-heading"><div><p class="audience-label teacher">USO DOCENTE</p><h2 id="documentos-docentes">Planificación y seguimiento</h2></div><p>Incluye orientaciones pedagógicas y documentos de trabajo docente.</p></div>
-      <div class="resource-grid">
-        <a class="resource-card" href="documento.html?archivo=02_Guia_Docente/Guia_Docente_NTICX.md"><span>👨‍🏫</span><strong>Guía docente</strong><small>Orientaciones didácticas y evaluación.</small></a>
-        <a class="resource-card" href="documento.html?archivo=01_Planificacion_y_Cronograma/Planificacion_Anual_NTICX_2026_Actualizada.md"><span>🗓️</span><strong>Planificación anual</strong><small>Propuesta curricular actualizada.</small></a>
-        <a class="resource-card" href="documento.html?archivo=01_Planificacion_y_Cronograma/Cronograma_Maestro_38_Clases.md"><span>📅</span><strong>Cronograma maestro</strong><small>Las 38 clases del año.</small></a>
+    <!-- SECCIÓN: MATERIALES GENERALES PARA ESTUDIANTES -->
+    <section class="resource-section" id="sec-guias-estudiantes">
+      <div class="section-heading-clean">
+        <div class="heading-left">
+          <span class="section-pill-tag student">🎒 Estudiantes</span>
+          <h2>Cuadernillos y Manual de Estudio</h2>
+        </div>
+        <span class="heading-desc">Lectura y ejercitación para todo el ciclo lectivo</span>
+      </div>
+      <div class="resource-cards-grid">
+        <a class="card-item-modern" href="documento.html?archivo=03_Guia_Estudiantes/Manual_Estudiante_NTICX.md">
+          <div class="card-item-header">
+            <span class="badge-num-pill t1">Manual Completo</span>
+            <span class="card-item-module">7 Módulos + Glosario</span>
+          </div>
+          <h3 class="card-item-title">Manual del Estudiante de NTICx</h3>
+          <p class="card-item-desc">Contenidos teóricos detallados, explicaciones sencillas, analogías cotidianas y glosario terminológico de la A a la Z.</p>
+          <div class="card-item-footer">
+            <span>🎒 Para Estudiantes</span>
+            <span class="action-cue">Abrir lectura →</span>
+          </div>
+        </a>
+
+        <a class="card-item-modern" href="documento.html?archivo=04_Cuadernillo_Actividades/Cuadernillo_Actividades_38_Clases.md">
+          <div class="card-item-header">
+            <span class="badge-num-pill t2">Cuadernillo Anual</span>
+            <span class="card-item-module">38 Clases</span>
+          </div>
+          <h3 class="card-item-title">Cuadernillo Anual de Actividades</h3>
+          <p class="card-item-desc">Compendio unificado con las 38 fichas de actividades en formato imprimible de doble vía (desenchufada y digital).</p>
+          <div class="card-item-footer">
+            <span>🎒 Para Estudiantes</span>
+            <span class="action-cue">Abrir lectura →</span>
+          </div>
+        </a>
       </div>
     </section>
 
-    <section class="resource-section" aria-labelledby="evaluaciones">
-      <div class="section-heading"><div><p class="audience-label student">PARA ESTUDIANTES</p><h2 id="evaluaciones">Evaluaciones y proyectos</h2></div><p>Consignas, criterios y rúbricas de entrega.</p></div>
-      <div id="evaluaciones-estudiantes" class="resource-list" aria-live="polite"></div>
-      <div class="teacher-panel">
-        <p class="audience-label teacher">USO DOCENTE</p>
-        <h3>Instrumentos con guía de corrección</h3>
-        <p>La versión docente de la evaluación trimestral incluye respuestas clave y criterios de corrección.</p>
-        <div id="evaluaciones-docente" class="resource-list" aria-live="polite"></div>
+    <!-- SECCIÓN: DOCUMENTOS PEDAGÓGICOS DOCENTES -->
+    <section class="resource-section" id="sec-guias-docentes">
+      <div class="section-heading-clean">
+        <div class="heading-left">
+          <span class="section-pill-tag teacher">👨‍🏫 Uso Docente</span>
+          <h2>Planificación Curricular y Orientaciones</h2>
+        </div>
+        <span class="heading-desc">Marco didáctico oficial y seguimiento de 38 clases</span>
+      </div>
+      <div class="resource-cards-grid">
+        <a class="card-item-modern" href="documento.html?archivo=02_Guia_Docente/Guia_Docente_NTICX.md&audiencia=docente">
+          <div class="card-item-header">
+            <span class="badge-num-pill doc">Orientaciones</span>
+            <span class="card-item-module">Didáctica y RITE</span>
+          </div>
+          <h3 class="card-item-title">Guía Docente de NTICx</h3>
+          <p class="card-item-desc">Estrategias para el aula-taller desenchufada, manejo de la brecha digital, abordaje de temas sensibles y rúbricas RITE.</p>
+          <div class="card-item-footer">
+            <span>👨‍🏫 Equipo Docente</span>
+            <span class="action-cue">Consultar guía →</span>
+          </div>
+        </a>
+
+        <a class="card-item-modern" href="documento.html?archivo=01_Planificacion_y_Cronograma/Planificacion_Anual_NTICX_2026_Actualizada.md&audiencia=docente">
+          <div class="card-item-header">
+            <span class="badge-num-pill doc">Curricular</span>
+            <span class="card-item-module">Plan Anual 2026</span>
+          </div>
+          <h3 class="card-item-title">Planificación Anual de NTICx</h3>
+          <p class="card-item-desc">Fundamentación pedagógica, objetivos de aprendizaje, contenidos por trimestre, evaluación formativa y articulación institucional.</p>
+          <div class="card-item-footer">
+            <span>👨‍🏫 Equipo Docente</span>
+            <span class="action-cue">Consultar plan →</span>
+          </div>
+        </a>
+
+        <a class="card-item-modern" href="documento.html?archivo=01_Planificacion_y_Cronograma/Cronograma_Maestro_38_Clases.md&audiencia=docente">
+          <div class="card-item-header">
+            <span class="badge-num-pill doc">Cronograma</span>
+            <span class="card-item-module">Semana a Semana</span>
+          </div>
+          <h3 class="card-item-title">Cronograma Maestro de 38 Clases</h3>
+          <p class="card-item-desc">Distribución temporal detallada clase por clase, correlación con el calendario escolar bonaerense, feriados y semanas especiales.</p>
+          <div class="card-item-footer">
+            <span>👨‍🏫 Equipo Docente</span>
+            <span class="action-cue">Consultar fechas →</span>
+          </div>
+        </a>
       </div>
     </section>
 
-    <section id="primer-trimestre" class="resource-section" aria-labelledby="titulo-primer-trimestre">
-      <div class="section-heading"><div><p class="audience-label student">PARA ESTUDIANTES</p><h2 id="titulo-primer-trimestre">Fichas · 1° trimestre</h2></div><p>Elegí una ficha por su tema y número.</p></div>
-      <div id="fichas-1" class="resource-list" aria-live="polite"></div>
-    </section>
-    <section id="segundo-trimestre" class="resource-section" aria-labelledby="titulo-segundo-trimestre">
-      <div class="section-heading"><div><p class="audience-label student">PARA ESTUDIANTES</p><h2 id="titulo-segundo-trimestre">Fichas · 2° trimestre</h2></div><p>Elegí una ficha por su tema y número.</p></div>
-      <div id="fichas-2" class="resource-list" aria-live="polite"></div>
-    </section>
-    <section id="tercer-trimestre" class="resource-section" aria-labelledby="titulo-tercer-trimestre">
-      <div class="section-heading"><div><p class="audience-label student">PARA ESTUDIANTES</p><h2 id="titulo-tercer-trimestre">Fichas · 3° trimestre</h2></div><p>Elegí una ficha por su tema y número.</p></div>
-      <div id="fichas-3" class="resource-list" aria-live="polite"></div>
+    <!-- SECCIÓN: EVALUACIONES TRIMESTRALES -->
+    <section class="resource-section" id="sec-evaluaciones">
+      <div class="section-heading-clean">
+        <div class="heading-left">
+          <span class="section-pill-tag student">📝 Evaluaciones</span>
+          <h2>Instancias de Evaluación y Proyectos</h2>
+        </div>
+        <span class="heading-desc">Consignas, criterios formativos y rúbricas</span>
+      </div>
+      <div id="evaluaciones-estudiantes" class="resource-cards-grid" aria-live="polite"></div>
+
+      <div class="teacher-panel-clean">
+        <span class="section-pill-tag teacher">👨‍🏫 Claves Pedagógicas Docentes</span>
+        <h3>Instrumentos con Criterios de Corrección RITE</h3>
+        <p>Versión docente con solucionario pedagógico, ponderación cualitativa (TEA / TEP / TED) y alternativas para estudiantes con trayectorias discontinuas.</p>
+        <div id="evaluaciones-docente" class="resource-cards-grid" aria-live="polite"></div>
+      </div>
     </section>
 
-    <section class="resource-section" aria-labelledby="referencias">
-      <h2 id="referencias">Bibliografía y diseño curricular</h2>
-      <div class="resource-grid">
-        <a class="resource-card" href="../Diseño_Curricular/tic_4_final_web.pdf" target="_blank" rel="noopener noreferrer"><span>📑</span><strong>Diseño curricular para ES4</strong><small>PDF · se abre en una pestaña nueva.</small></a>
-        <a class="resource-card" href="../Bibliografía/ntix_cropped.pdf" target="_blank" rel="noopener noreferrer"><span>📚</span><strong>Bibliografía de NTICx</strong><small>PDF · se abre en una pestaña nueva.</small></a>
+    <!-- SECCIÓN: FICHAS 1° TRIMESTRE -->
+    <section id="primer-trimestre" class="resource-section">
+      <div class="section-heading-clean">
+        <div class="heading-left">
+          <span class="section-pill-tag student">Fichas 1 a 12</span>
+          <h2>Fichas de Actividades · 1° Trimestre</h2>
+        </div>
+        <span class="heading-desc">Hardware, arquitectura Von Neumann, binario y redes</span>
+      </div>
+      <div id="fichas-1" class="resource-cards-grid" aria-live="polite"></div>
+    </section>
+
+    <!-- SECCIÓN: FICHAS 2° TRIMESTRE -->
+    <section id="segundo-trimestre" class="resource-section">
+      <div class="section-heading-clean">
+        <div class="heading-left">
+          <span class="section-pill-tag student">Fichas 13 a 25</span>
+          <h2>Fichas de Actividades · 2° Trimestre</h2>
+        </div>
+        <span class="heading-desc">Web, semiótica visual, medios digitales, ESI y Fake News</span>
+      </div>
+      <div id="fichas-2" class="resource-cards-grid" aria-live="polite"></div>
+    </section>
+
+    <!-- SECCIÓN: FICHAS 3° TRIMESTRE -->
+    <section id="tercer-trimestre" class="resource-section">
+      <div class="section-heading-clean">
+        <div class="heading-left">
+          <span class="section-pill-tag student">Fichas 26 a 38</span>
+          <h2>Fichas de Actividades · 3° Trimestre</h2>
+        </div>
+        <span class="heading-desc">Multimedia, ciudadanía digital, IA y Proyecto Anual ABP</span>
+      </div>
+      <div id="fichas-3" class="resource-cards-grid" aria-live="polite"></div>
+    </section>
+
+    <!-- SECCIÓN: DISEÑO CURRICULAR Y BIBLIOGRAFÍA -->
+    <section class="resource-section" id="sec-referencias">
+      <div class="section-heading-clean">
+        <div class="heading-left">
+          <span class="section-pill-tag teacher">Normativa</span>
+          <h2>Bibliografía y Marco Curricular Oficial</h2>
+        </div>
+        <span class="heading-desc">Documentos oficiales de la DGCyE PBA</span>
+      </div>
+      <div class="resource-cards-grid">
+        <a class="card-item-modern" href="../Diseño_Curricular/tic_4_final_web.pdf" target="_blank" rel="noopener noreferrer">
+          <div class="card-item-header">
+            <span class="badge-num-pill doc">DGCyE PBA</span>
+            <span class="card-item-module">Resolución Oficial</span>
+          </div>
+          <h3 class="card-item-title">Diseño Curricular de NTICx para ES4</h3>
+          <p class="card-item-desc">Documento curricular oficial de la Dirección General de Cultura y Educación de la Provincia de Buenos Aires (2010).</p>
+          <div class="card-item-footer">
+            <span>📑 PDF Oficial</span>
+            <span class="action-cue">Abrir PDF ↗</span>
+          </div>
+        </a>
+
+        <a class="card-item-modern" href="../Bibliografía/ntix_cropped.pdf" target="_blank" rel="noopener noreferrer">
+          <div class="card-item-header">
+            <span class="badge-num-pill doc">Bibliografía</span>
+            <span class="card-item-module">Ed. Maipué</span>
+          </div>
+          <h3 class="card-item-title">Bibliografía de Consulta: NTICx</h3>
+          <p class="card-item-desc">Texto de referencia pedagógica de Ana María Andrada: dispositivos, saberes y prácticas para el aula secundaria.</p>
+          <div class="card-item-footer">
+            <span>📚 PDF Bibliografía</span>
+            <span class="action-cue">Abrir PDF ↗</span>
+          </div>
+        </a>
       </div>
     </section>
   </main>
-  <footer class="site-footer"><p><strong>EES N° 33 “16 de septiembre” • José C. Paz</strong></p><p style="margin-top:4px">NTICx 4° 1° • Ciclo lectivo 2026</p></footer>
+
+  <footer class="site-footer">
+    <p><strong>EES N° 33 “16 de septiembre” • José C. Paz</strong></p>
+    <p style="margin-top:4px">NTICx 4° 1° • Ciclo Lectivo 2026 • Docente: Nahuel Lemos</p>
+  </footer>
+
   <script src="theme.js"></script>
+  <script src="data.js"></script>
   <script src="materiales.js"></script>
 </body>
 </html>

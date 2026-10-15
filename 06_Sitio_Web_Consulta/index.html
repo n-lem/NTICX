@@ -39,7 +39,7 @@
     </div>
   </div>
 
-  <!-- HEADER NAVEGABLE -->
+  <!-- HEADER UNIFICADO -->
   <header class="header-glass">
     <div class="header-container">
       <a href="./" class="brand" aria-label="Ir al inicio de la plataforma NTICx">
@@ -50,15 +50,27 @@
         </div>
       </a>
 
+      <nav class="header-nav" aria-label="Navegación principal">
+        <a href="./" class="nav-link active" id="nav-link-inicio">
+          <span class="nav-icon">⌂</span> <span class="nav-text">Inicio</span>
+        </a>
+        <a href="materiales.html" class="nav-link" id="nav-link-materiales">
+          <span class="nav-icon">📚</span> <span class="nav-text">Materiales</span>
+        </a>
+        <a href="calendario.html" class="nav-link" id="nav-link-calendario">
+          <span class="nav-icon">🗓️</span> <span class="nav-text">Calendario</span>
+        </a>
+      </nav>
+
       <div class="header-controls">
         <button id="theme-toggle-btn" class="btn-icon" type="button" title="Cambiar tema" aria-pressed="false">
-          <span>🌙</span> Modo Oscuro
-        </button>
-        <button id="lock-session-btn" class="btn-icon" type="button" title="Bloquear sesión">
-          <span>🔒</span> Bloquear
+          <span class="theme-icon">🌙</span> <span class="control-text">Modo Oscuro</span>
         </button>
         <button onclick="window.print()" class="btn-icon" type="button" title="Imprimir pantalla">
-          <span>🖨️</span> Imprimir
+          <span>🖨️</span> <span class="control-text">Imprimir</span>
+        </button>
+        <button id="lock-session-btn" class="btn-icon" type="button" title="Bloquear sesión">
+          <span>🔒</span> <span class="control-text">Bloquear</span>
         </button>
       </div>
     </div>

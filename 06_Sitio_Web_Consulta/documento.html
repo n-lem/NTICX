@@ -3,18 +3,81 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lector de documentos de NTICx 4° Año. EES N° 33 '16 de septiembre'.">
   <meta name="theme-color" content="#2563eb">
-  <title>Documento | NTICx 4° Año</title>
+  <title>Lectura de Material | NTICx 4° Año</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('nticx-theme') || 'light');</script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header-glass"><div class="header-container"><a href="./" class="brand"><div class="brand-badge">NTICx</div><div class="brand-info"><h1>Lectura de materiales</h1><p>EES N° 33 • 4° Año</p></div></a><div class="header-controls"><button id="theme-toggle-btn" class="btn-icon" type="button" aria-pressed="false" title="Cambiar tema">🌙 Modo Oscuro</button><button class="btn-icon" type="button" onclick="window.print()">🖨️ Imprimir / Guardar PDF</button><a href="calendario.html" class="btn-icon">🗓️ Calendario</a><a href="./" class="btn-icon">⌂ Sitio principal</a><a href="materiales.html" class="btn-icon">← Materiales</a></div></div></header>
+  <!-- HEADER UNIFICADO -->
+  <header class="header-glass">
+    <div class="header-container">
+      <a href="./" class="brand" aria-label="Ir al inicio de la plataforma NTICx">
+        <div class="brand-badge">NTICx</div>
+        <div class="brand-info">
+          <h1>EES N° 33 “16 de septiembre”</h1>
+          <p>4° 1° Secundaria • José C. Paz • Prof. Nahuel Lemos</p>
+        </div>
+      </a>
+
+      <nav class="header-nav" aria-label="Navegación principal">
+        <a href="./" class="nav-link" id="nav-link-inicio">
+          <span class="nav-icon">⌂</span> <span class="nav-text">Inicio</span>
+        </a>
+        <a href="materiales.html" class="nav-link active" id="nav-link-materiales">
+          <span class="nav-icon">📚</span> <span class="nav-text">Materiales</span>
+        </a>
+        <a href="calendario.html" class="nav-link" id="nav-link-calendario">
+          <span class="nav-icon">🗓️</span> <span class="nav-text">Calendario</span>
+        </a>
+      </nav>
+
+      <div class="header-controls">
+        <button id="theme-toggle-btn" class="btn-icon" type="button" title="Cambiar tema" aria-pressed="false">
+          <span class="theme-icon">🌙</span> <span class="control-text">Modo Oscuro</span>
+        </button>
+        <button onclick="window.print()" class="btn-icon" type="button" title="Imprimir o guardar como PDF">
+          <span>🖨️</span> <span class="control-text">Imprimir PDF</span>
+        </button>
+        <button id="lock-session-btn" class="btn-icon" type="button" title="Bloquear sesión">
+          <span>🔒</span> <span class="control-text">Bloquear</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
   <main class="main-container document-page">
-    <p><a class="back-link" href="materiales.html">← Volver a materiales</a></p>
-    <article id="documento" class="document-viewer" aria-live="polite"><p class="loading">Cargando documento…</p></article>
+    <!-- TOOLBAR DEL LECTOR -->
+    <div class="reader-toolbar">
+      <a class="back-btn" href="materiales.html">← Volver a materiales</a>
+
+      <div class="reader-toolbar-actions">
+        <div class="font-size-adjuster" title="Ajustar tamaño de texto para lectura">
+          <span style="font-size:0.75rem; color:var(--text-muted); margin: 0 4px;">Texto:</span>
+          <button type="button" id="btn-font-sm" class="font-btn" title="Texto pequeño">A-</button>
+          <button type="button" id="btn-font-md" class="font-btn active" title="Texto mediano (predeterminado)">A</button>
+          <button type="button" id="btn-font-lg" class="font-btn" title="Texto grande">A+</button>
+          <button type="button" id="btn-font-xl" class="font-btn" title="Texto extra grande">A++</button>
+        </div>
+        <button type="button" onclick="window.print()" class="btn-icon" title="Imprimir o exportar PDF">
+          🖨️ Guardar PDF
+        </button>
+      </div>
+    </div>
+
+    <!-- CONTENEDOR DEL DOCUMENTO CON TIPOGRAFÍA MEJORADA -->
+    <article id="documento" class="document-viewer font-size-md" aria-live="polite">
+      <p class="loading">Cargando documento pedagógico…</p>
+    </article>
   </main>
+
+  <footer class="site-footer">
+    <p><strong>EES N° 33 “16 de septiembre” • José C. Paz</strong></p>
+    <p style="margin-top:4px">NTICx 4° 1° • Ciclo Lectivo 2026 • Docente: Nahuel Lemos</p>
+  </footer>
+
   <script src="theme.js"></script>
   <script src="documento.js"></script>
 </body>
