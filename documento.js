@@ -249,7 +249,7 @@ async function cargarDocumento() {
 
     salida.innerHTML = `
       ${aviso}
-      <p class="document-source">Materia: NTICx 4° 1° • EES N° 33 “16 de septiembre” • Prof. Nahuel Lemos${original}</p>
+      <p class="document-source">Materia: NTICx 4° 1° • EES N° 33 “16 de septiembre” • Ciclo Lectivo 2026${original}</p>
       ${renderMarkdown(markdown)}
     `;
 
