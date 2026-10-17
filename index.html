@@ -1,13 +1,458 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=06_Sitio_Web_Consulta/">
-  <title>NTICx 4° Año | EES N° 33</title>
-  <link rel="canonical" href="06_Sitio_Web_Consulta/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NTICx 4° Año | EES N° 33 "16 de septiembre" (José C. Paz)</title>
+  <meta name="description" content="Plataforma de consulta pedagógica y curricular para la materia NTICx de 4to año. 38 clases con modalidad desenchufada y digital, manual del estudiante, cuadernillo de fichas, evaluaciones y calendario.">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:title" content="NTICx 4° Año | EES N° 33">
+  <meta property="og:description" content="38 clases, fichas de actividades, manual, evaluaciones y calendario anual para NTICx.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('nticx-theme') || 'light');</script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <p>Redirigiendo a la <a href="06_Sitio_Web_Consulta/">plataforma de NTICx 4° Año</a>…</p>
+
+  <!-- PORTAL DE ACCESO / BLOQUEO CON CONTRASEÑA -->
+  <div id="auth-gate" class="auth-gate">
+    <div class="auth-card" id="auth-card">
+      <div class="auth-icon-circle">🔐</div>
+      <span class="auth-badge">EES N° 33 • 4° 1°</span>
+      <h2 class="auth-title">Plataforma NTICx 2026</h2>
+      <p class="auth-subtitle">Ingresá la contraseña del curso para acceder a las 38 clases, manual y actividades</p>
+
+      <form id="auth-form" class="auth-form" onsubmit="event.preventDefault();">
+        <div class="auth-input-wrapper">
+          <input type="password" id="auth-password-input" class="auth-input" placeholder="Contraseña de acceso..." autocomplete="current-password" required>
+          <button type="button" id="auth-toggle-pwd" class="auth-toggle-visibility" title="Mostrar/Ocultar contraseña">👁️</button>
+        </div>
+        <div id="auth-error-msg" class="auth-error"></div>
+        <button type="submit" id="auth-submit-btn" class="auth-submit-btn">Ingresar a la Plataforma</button>
+      </form>
+
+      <div class="auth-hint">
+        💡 <strong>Docente:</strong> Nahuel Lemos | José C. Paz<br>
+        Si sos estudiante de 4° año y no tenés la clave, solicitala en clase.
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER UNIFICADO -->
+  <header class="header-glass">
+    <div class="header-container">
+      <a href="./" class="brand" aria-label="Plataforma NTICx - EES N° 33">
+        <div class="brand-badge">NTICx</div>
+        <div class="brand-info">
+          <h1>EES N° 33 “16 de septiembre”</h1>
+          <p>4° 1° Secundaria • José C. Paz • Prof. Nahuel Lemos</p>
+        </div>
+      </a>
+
+      <!-- NAVEGACIÓN PRINCIPAL -->
+      <nav class="header-nav" aria-label="Navegación principal">
+        <button type="button" class="nav-tab-link active" data-tab="tab-clases">
+          <span class="nav-icon">📅</span> <span class="nav-text">Clases</span>
+        </button>
+        <button type="button" class="nav-tab-link" data-tab="tab-cuadernillo">
+          <span class="nav-icon">📝</span> <span class="nav-text">Fichas</span>
+        </button>
+        <button type="button" class="nav-tab-link" data-tab="tab-manual">
+          <span class="nav-icon">📖</span> <span class="nav-text">Manual</span>
+        </button>
+        <button type="button" class="nav-tab-link" data-tab="tab-evaluaciones">
+          <span class="nav-icon">⚖️</span> <span class="nav-text">Evaluaciones</span>
+        </button>
+        <button type="button" class="nav-tab-link" data-tab="tab-glosario">
+          <span class="nav-icon">🔍</span> <span class="nav-text">Glosario</span>
+        </button>
+        <button type="button" class="nav-tab-link" data-tab="tab-calendario">
+          <span class="nav-icon">🗓️</span> <span class="nav-text">Calendario</span>
+        </button>
+        <button type="button" class="nav-tab-link" data-tab="tab-docente">
+          <span class="nav-icon">👨‍🏫</span> <span class="nav-text">Docente</span>
+        </button>
+      </nav>
+
+      <div class="header-controls">
+        <button id="theme-toggle-btn" class="btn-icon" type="button" title="Cambiar tema">
+          <span class="theme-icon">🌙</span> <span class="control-text">Modo Oscuro</span>
+        </button>
+        <button onclick="window.print()" class="btn-icon" type="button" title="Imprimir pantalla">
+          <span>🖨️</span> <span class="control-text">Imprimir</span>
+        </button>
+        <button id="lock-session-btn" class="btn-icon" type="button" title="Bloquear sesión">
+          <span>🔒</span> <span class="control-text">Bloquear</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO BANNER INSTITUCIONAL -->
+  <section class="hero-banner">
+    <div class="hero-content">
+      <span class="hero-tag">CICLO LECTIVO 2026 • DGCyE PROVINCIA DE BUENOS AIRES</span>
+      <h2 class="hero-title">Nuevas Tecnologías de la Información y la Conectividad</h2>
+      <p class="hero-subtitle">
+        Programa Curricular Oficial de <strong>38 Clases</strong> con <strong>Doble Vía Pedagógica</strong>: Modalidad Desenchufada (*Unplugged*) garantizada para el aula sin conectividad y Modalidad Digital situada.
+      </p>
+
+      <div class="hero-meta-pills">
+        <span class="hero-pill">💻 7 Módulos Curriculares</span>
+        <span class="hero-pill">⏱️ 38 Clases de 2 Horas</span>
+        <span class="hero-pill">🧩 Didáctica Sadosky Unplugged</span>
+        <span class="hero-pill">📚 Manual Maipué Integrado</span>
+        <span class="hero-pill">🎗️ ESI, Memoria y Grooming (Ley 27.590)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PESTAÑAS SECUNDARIAS -->
+  <nav class="nav-tabs-container">
+    <div class="nav-tabs" role="tablist" aria-label="Secciones de la plataforma">
+      <button class="tab-btn active" type="button" role="tab" aria-selected="true" aria-controls="tab-clases" data-target="tab-clases">
+        <span>📅</span> Clases (1 a 38)
+      </button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="tab-cuadernillo" data-target="tab-cuadernillo">
+        <span>📝</span> Fichas de Actividades
+      </button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="tab-manual" data-target="tab-manual">
+        <span>📖</span> Manual del Estudiante
+      </button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="tab-evaluaciones" data-target="tab-evaluaciones">
+        <span>⚖️</span> Evaluaciones y RITE
+      </button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="tab-glosario" data-target="tab-glosario">
+        <span>🔍</span> Glosario Técnico
+      </button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="tab-calendario" data-target="tab-calendario">
+        <span>🗓️</span> Calendario 2026
+      </button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="tab-docente" data-target="tab-docente">
+        <span>👨‍🏫</span> Marco Docente
+      </button>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-container">
+
+    <!-- TAB 1: CLASES Y CRONOGRAMA MAESTRO -->
+    <section id="tab-clases" class="tab-content active" role="tabpanel">
+      <!-- BANNER DE DOBLE VÍA -->
+      <div class="dual-mode-banner">
+        <div class="dual-mode-info">
+          <h3><span>⚡</span> Enfoque de Doble Vía Pedagógica</h3>
+          <p>Elegí qué actividades visualizar según el estado del aula hoy (computadoras y conectividad disponibles):</p>
+        </div>
+        <div class="mode-switch-group">
+          <button class="mode-switch-btn active" data-mode="both">Ambas Vías</button>
+          <button class="mode-switch-btn" data-mode="unplugged">📝 Solo Desenchufada</button>
+          <button class="mode-switch-btn" data-mode="digital">💻 Solo Digital</button>
+        </div>
+      </div>
+
+      <!-- BARRA DE FILTROS Y BÚSQUEDA -->
+      <div class="toolbar">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="class-search-input" class="search-input" placeholder="Buscar clase por tema, palabra clave, efeméride o software...">
+        </div>
+
+        <div class="filter-group">
+          <button class="filter-btn active" data-trim="todos">Todas (38)</button>
+          <button class="filter-btn" data-trim="1">1° Trimestre (1-12)</button>
+          <button class="filter-btn" data-trim="2">2° Trimestre (13-25)</button>
+          <button class="filter-btn" data-trim="3">3° Trimestre (26-38)</button>
+        </div>
+      </div>
+
+      <!-- GRILLA DINÁMICA DE CLASES -->
+      <div id="classes-container" class="classes-grid">
+        <!-- Renderizado dinámico vía app.js -->
+      </div>
+    </section>
+
+    <!-- TAB 2: CUADERNILLO Y FICHAS DE TRABAJO -->
+    <section id="tab-cuadernillo" class="tab-content" role="tabpanel">
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 24px; margin-bottom: 24px; box-shadow: var(--shadow-sm);">
+        <h2 style="color: var(--primary); margin-bottom: 8px;">📝 Cuadernillo y Fichas de Actividades (1 a 38)</h2>
+        <p style="color: var(--text-muted); margin-bottom: 16px; line-height: 1.6;">
+          Cada clase cuenta con su ficha individual homologada para resolver en la carpeta física de hojas N° 3 o cuaderno. Todas las actividades están diseñadas para resolverse sin necesidad obligatoria de computadoras o Internet.
+        </p>
+
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <a href="documento.html?archivo=04_Cuadernillo_Actividades/Cuadernillo_Actividades_38_Clases.md" class="btn-icon">
+            <span>📖</span> Abrir Cuadernillo Completo (38 Fichas)
+          </a>
+          <a href="documento.html?archivo=03_Guia_Estudiantes/Manual_Estudiante_NTICX.md" class="btn-icon">
+            <span>📚</span> Manual del Estudiante
+          </a>
+          <button onclick="window.print()" class="btn-icon" type="button">
+            <span>🖨️</span> Imprimir para Fotocopias
+          </button>
+        </div>
+      </div>
+
+      <!-- BARRA DE BÚSQUEDA Y FILTRO DE FICHAS -->
+      <div class="materials-toolbar">
+        <div class="materials-search-row">
+          <input type="search" id="fichas-search-input" class="materials-search-input" placeholder="🔍 Buscar ficha por tema, palabra clave o número (ej. binario, von neumann, grooming, ficha 12)..." aria-label="Buscar fichas">
+        </div>
+        <div class="materials-filter-chips" role="group" aria-label="Filtrar fichas por trimestre">
+          <button type="button" class="filter-chip-btn fichas-chip-btn active" data-filter="todos">Todas las Fichas (38)</button>
+          <button type="button" class="filter-chip-btn fichas-chip-btn" data-filter="1">1° Trimestre (Fichas 1 a 12)</button>
+          <button type="button" class="filter-chip-btn fichas-chip-btn" data-filter="2">2° Trimestre (Fichas 13 a 25)</button>
+          <button type="button" class="filter-chip-btn fichas-chip-btn" data-filter="3">3° Trimestre (Fichas 26 a 38)</button>
+        </div>
+      </div>
+
+      <!-- GRILLA DINÁMICA DE LAS 38 FICHAS -->
+      <div id="fichas-grid-container" class="resource-cards-grid">
+        <!-- Renderizado dinámico vía app.js -->
+      </div>
+    </section>
+
+    <!-- TAB 3: MANUAL TEÓRICO DEL ESTUDIANTE -->
+    <section id="tab-manual" class="tab-content" role="tabpanel">
+      <div class="manual-grid">
+        <aside class="manual-sidebar">
+          <div class="manual-nav-title">Módulos del Manual</div>
+          <ul id="manual-nav" class="manual-nav-list">
+            <!-- Items generados en app.js -->
+          </ul>
+        </aside>
+
+        <article id="manual-viewer" class="manual-viewer">
+          <!-- Contenido del módulo seleccionado -->
+        </article>
+      </div>
+    </section>
+
+    <!-- TAB 4: EVALUACIONES Y RÉGIMEN RITE -->
+    <section id="tab-evaluaciones" class="tab-content" role="tabpanel">
+      <div style="margin-bottom: 24px;">
+        <h2 style="color: var(--primary); margin-bottom: 6px;">⚖️ Sistema de Evaluación y Acreditación de Trayectorias</h2>
+        <p style="color: var(--text-muted);">
+          Régimen académico oficial de la Provincia de Buenos Aires (DGCyE): Evaluación formativa, procesual y continua.
+        </p>
+      </div>
+
+      <div class="eval-card-grid">
+        <div class="eval-card">
+          <span class="eval-card-badge">CLASE 1 • INICIAL</span>
+          <h3>Evaluación Diagnóstica</h3>
+          <p>Relevamiento de saberes previos, encuesta anónima de dispositivos y conectividad en los hogares de José C. Paz, y firma del contrato pedagógico.</p>
+          <a href="documento.html?archivo=05_Evaluaciones/Evaluacion_Diagnostica_Inicial.md" class="btn-detail" style="text-align: center; text-decoration: none;">Ver instrumento →</a>
+        </div>
+
+        <div class="eval-card">
+          <span class="eval-card-badge">CLASE 12 • 1° TRIMESTRE</span>
+          <h3>Evaluación Escrita Integradora N° 1</h3>
+          <p>Examen estructurado con Tema 1 y Tema 2 diferenciados: Von Neumann, sistema binario, unidades de almacenamiento, software libre y redes TCP/IP.</p>
+          <div style="display:flex; gap:6px; margin-top:auto;">
+            <a href="documento.html?archivo=05_Evaluaciones/Evaluacion_Trimestral_1.md&vista=estudiantes" class="btn-detail" style="flex:1; text-align: center; text-decoration: none;">Estudiantes</a>
+            <a href="documento.html?archivo=05_Evaluaciones/Evaluacion_Trimestral_1.md&audiencia=docente" class="btn-detail" style="flex:1; text-align: center; text-decoration: none;">Docente RITE</a>
+          </div>
+        </div>
+
+        <div class="eval-card">
+          <span class="eval-card-badge">CLASE 25 • 2° TRIMESTRE</span>
+          <h3>Trabajo Práctico Evaluativo N° 2</h3>
+          <p>Producción comunicacional en grupos conmemorando el 16 de Septiembre. Integra diseño de marcas, artículo con ESI / Ley Mica Ortega y análisis semiótico.</p>
+          <a href="documento.html?archivo=05_Evaluaciones/Trabajo_Practico_Evaluativo_2.md" class="btn-detail" style="text-align: center; text-decoration: none;">Ver pautas y rúbrica →</a>
+        </div>
+
+        <div class="eval-card">
+          <span class="eval-card-badge">CLASES 35 A 38 • 3° TRIMESTRE</span>
+          <h3>Proyecto Final Integrador (ABP)</h3>
+          <p>Campaña sociocomunitaria sobre problemáticas de José C. Paz (Grooming, Fake News, ESI o Privacidad). Guion previo, producto multimedia, defensa oral y acreditación RITE.</p>
+          <a href="documento.html?archivo=05_Evaluaciones/Proyecto_Integrador_Anual_3.md" class="btn-detail" style="text-align: center; text-decoration: none;">Ver proyecto y rúbrica →</a>
+        </div>
+      </div>
+
+      <!-- RITE BANNER -->
+      <div class="rite-banner">
+        <h3>📋 Escala Oficial de Valoración de Trayectorias (RITE)</h3>
+        <div class="rite-grid">
+          <div class="rite-box tea">
+            <h4 style="font-weight: 800; margin-bottom: 4px;">TEA</h4>
+            <p><strong>Trayectoria Educativa Avanzada:</strong> Estudiantes que alcanzaron los aprendizajes prioritarios con autonomía, regularidad activa y fundamentación sólida.</p>
+          </div>
+          <div class="rite-box tep">
+            <h4 style="font-weight: 800; margin-bottom: 4px;">TEP</h4>
+            <p><strong>Trayectoria Educativa en Proceso:</strong> Estudiantes que requieren instancias de intensificación para afianzar contenidos teóricos o completar fichas de actividades.</p>
+          </div>
+          <div class="rite-box ted">
+            <h4 style="font-weight: 800; margin-bottom: 4px;">TED</h4>
+            <p><strong>Trayectoria Educativa Discontinua:</strong> Estudiantes con escasa vinculación o aprendizajes no alcanzados. Requieren plan intensivo focalizado en diciembre y febrero.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: GLOSARIO TÉCNICO INTERACTIVO -->
+    <section id="tab-glosario" class="tab-content" role="tabpanel">
+      <div class="toolbar">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="glossary-search-input" class="search-input" placeholder="Buscar término técnico (ej: ALU, Grooming, Habeas Data, TCP/IP, Bit)...">
+        </div>
+      </div>
+
+      <div id="glossary-container" class="glossary-grid">
+        <!-- Generado en app.js -->
+      </div>
+    </section>
+
+    <!-- TAB 6: CALENDARIO ESCOLAR ANUAL 2026 -->
+    <section id="tab-calendario" class="tab-content" role="tabpanel">
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 24px; margin-bottom: 24px; box-shadow: var(--shadow-sm);">
+        <h2 style="color: var(--primary); margin-bottom: 6px;">🗓️ Calendario Escolar y Planificación Anual 2026</h2>
+        <p style="color: var(--text-muted); line-height: 1.6;">
+          Organización temporal oficial de las 38 clases para el Ciclo Lectivo 2026 en la Provincia de Buenos Aires (DGCyE). Se destacan feriados nacionales, días no laborables y los períodos de receso escolar.
+        </p>
+      </div>
+
+      <div class="calendar-info" aria-label="Hitos del ciclo lectivo 2026">
+        <div class="calendar-period first">
+          <strong>1° cuatrimestre</strong>
+          <span>2 de marzo al 17 de julio</span>
+        </div>
+        <div class="calendar-period second">
+          <strong>2° cuatrimestre</strong>
+          <span>3 de agosto al 22 de diciembre</span>
+        </div>
+        <div class="calendar-period recess">
+          <strong>Receso invernal</strong>
+          <span>20 al 31 de julio</span>
+        </div>
+      </div>
+
+      <p class="calendar-legend">
+        <span class="legend-item holiday"></span> Feriado o día turístico 
+        <span class="legend-item period-start"></span> Inicio de cuatrimestre 
+        <span class="legend-item period-end"></span> Fin de cuatrimestre
+      </p>
+
+      <div id="calendar-grid" class="calendar-grid" aria-label="Calendario del año 2026">
+        <!-- Renderizado dinámico vía app.js -->
+      </div>
+
+      <p class="calendar-source">
+        Fechas escolares según el <a href="https://www.argentina.gob.ar/capital-humano/educacion/calendario-escolar-2026" target="_blank" rel="noopener noreferrer">Calendario Escolar 2026</a> y feriados oficiales según <a href="https://www.argentina.gob.ar/feriados" target="_blank" rel="noopener noreferrer">Argentina.gob.ar</a>.
+      </p>
+    </section>
+
+    <!-- TAB 7: MARCO DOCENTE Y NORMATIVO -->
+    <section id="tab-docente" class="tab-content" role="tabpanel">
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 28px; box-shadow: var(--shadow-sm);">
+        <h2 style="color: var(--primary); margin-bottom: 12px;">👨‍🏫 Marco Didáctico y Planificación Curricular</h2>
+        
+        <p style="margin-bottom: 20px; line-height: 1.7;">
+          Esta propuesta pedagógica está planificada para el espacio curricular <strong>NTICx de 4° año</strong> de la Escuela Secundaria bonaerense, bajo las pautas de la Dirección General de Cultura y Educación (DGCyE, Resolución 2496/07 y Diseño Curricular para ES4).
+        </p>
+
+        <div class="resource-cards-grid" style="margin-bottom: 28px;">
+          <a class="card-item-modern" href="documento.html?archivo=02_Guia_Docente/Guia_Docente_NTICX.md&audiencia=docente">
+            <div class="card-item-header">
+              <span class="badge-num-pill doc">Orientaciones</span>
+              <span class="card-item-module">Didáctica y RITE</span>
+            </div>
+            <h3 class="card-item-title">Guía Docente de NTICx</h3>
+            <p class="card-item-desc">Estrategias para el aula-taller desenchufada, manejo de la brecha digital, abordaje de temas sensibles y rúbricas RITE.</p>
+            <div class="card-item-footer">
+              <span>👨‍🏫 Equipo Docente</span>
+              <span class="action-cue">Abrir guía →</span>
+            </div>
+          </a>
+
+          <a class="card-item-modern" href="documento.html?archivo=01_Planificacion_y_Cronograma/Planificacion_Anual_NTICX_2026_Actualizada.md&audiencia=docente">
+            <div class="card-item-header">
+              <span class="badge-num-pill doc">Plan Curricular</span>
+              <span class="card-item-module">Ciclo 2026</span>
+            </div>
+            <h3 class="card-item-title">Planificación Anual de NTICx</h3>
+            <p class="card-item-desc">Fundamentación, objetivos de aprendizaje, contenidos por trimestre, criterios de evaluación y articulación institucional.</p>
+            <div class="card-item-footer">
+              <span>👨‍🏫 Equipo Docente</span>
+              <span class="action-cue">Abrir plan →</span>
+            </div>
+          </a>
+
+          <a class="card-item-modern" href="documento.html?archivo=01_Planificacion_y_Cronograma/Cronograma_Maestro_38_Clases.md&audiencia=docente">
+            <div class="card-item-header">
+              <span class="badge-num-pill doc">Cronograma</span>
+              <span class="card-item-module">38 Clases</span>
+            </div>
+            <h3 class="card-item-title">Cronograma Maestro de Clases</h3>
+            <p class="card-item-desc">Distribución temporal semana por semana, correlación con el calendario bonaerense, feriados y semanas especiales.</p>
+            <div class="card-item-footer">
+              <span>👨‍🏫 Equipo Docente</span>
+              <span class="action-cue">Abrir cronograma →</span>
+            </div>
+          </a>
+
+          <a class="card-item-modern" href="Diseño_Curricular/tic_4_final_web.pdf" target="_blank" rel="noopener noreferrer">
+            <div class="card-item-header">
+              <span class="badge-num-pill doc">DGCyE PBA</span>
+              <span class="card-item-module">Resolución Oficial</span>
+            </div>
+            <h3 class="card-item-title">Diseño Curricular para ES4</h3>
+            <p class="card-item-desc">Marco curricular oficial de la materia NTICx expedido por la Provincia de Buenos Aires (PDF descargable).</p>
+            <div class="card-item-footer">
+              <span>📑 Documento Oficial</span>
+              <span class="action-cue">Descargar PDF ↗</span>
+            </div>
+          </a>
+        </div>
+
+        <h3 style="font-size: 1.15rem; margin: 24px 0 8px; color: var(--accent);">📚 Bibliografía y Fuentes de Referencia</h3>
+        <ul style="margin-left: 20px; margin-bottom: 24px; line-height: 1.8;">
+          <li><strong>DGCyE (2010):</strong> <em>Diseño Curricular para ES4: Nuevas Tecnologías de la Información y la Conectividad</em>. La Plata.</li>
+          <li><strong>Fundación Sadosky (2018):</strong> <em>Ciencias de la Computación para el aula: 1° y 2° Ciclo de Educación Secundaria</em>. Colección de didáctica desenchufada.</li>
+          <li><strong>Andrada, Ana María (2015):</strong> <em>NTICx: Dispositivos, saberes y prácticas</em>. Editorial Maipué (Manual de referencia oficial en PBA). <a href="Bibliografía/ntix_cropped.pdf" target="_blank" rel="noopener noreferrer" style="color:var(--primary); font-weight:700;">[Descargar PDF]</a></li>
+          <li><strong>Marco Legal Nacional y Provincial:</strong> Ley 25.326 (Habeas Data), Ley 26.388 (Delitos Informáticos), Ley 26.150 y 14.744 (ESI), Ley 27.590 (Prevención del Grooming - Mica Ortega) y Ley 27.234 (Educar en Igualdad).</li>
+        </ul>
+
+        <h3 style="font-size: 1.15rem; margin: 20px 0 8px; color: var(--success);">🛡️ Protocolo Escolar ante Vulneración de Derechos Digitales</h3>
+        <p style="margin-bottom: 16px;">
+          Ante sospechas o relatos de estudiantes sobre situaciones de acoso digital, grooming o violencia estética en redes:
+        </p>
+        <div style="background: var(--bg-card-alt); border-left: 4px solid var(--danger); padding: 16px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;">
+          <p><strong>1. Escucha y contención:</strong> Jamás culpabilizar a la víctima ni emitir juicios morales.</p>
+          <p><strong>2. Preservar evidencias:</strong> Indicar no borrar chats, audios, fotos ni capturas de pantalla.</p>
+          <p><strong>3. Intervención institucional:</strong> Dar aviso inmediato al Equipo Directivo y al EOE (Equipo de Orientación Escolar).</p>
+          <p><strong>4. Líneas de denuncia y asesoramiento gratuitas:</strong> Línea <strong>102</strong> (Niñez y Adolescencia) y Línea <strong>137</strong> (Violencia Familiar y Sexual).</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL DE DETALLE DE CLASE -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal-content">
+      <button id="modal-close-btn" class="modal-close-btn" title="Cerrar modal">✕</button>
+      <div id="modal-body">
+        <!-- Inyectado dinámicamente vía app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER INSTITUCIONAL -->
+  <footer class="site-footer">
+    <p><strong>EES N° 33 “16 de septiembre” • José C. Paz • Provincia de Buenos Aires</strong></p>
+    <p style="margin-top: 4px;">NTICx 4° 1° • Ciclo Lectivo 2026 • Docente: Nahuel Lemos</p>
+    <p style="margin-top: 8px; font-size: 0.8rem; opacity: 0.75;">
+      Plataforma Offline-First construida bajo licencia Creative Commons Atribución-NoComercial-CompartirIgual (CC BY-NC-SA 4.0).
+    </p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="data.js"></script>
+  <script src="theme.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
