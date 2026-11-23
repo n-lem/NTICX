@@ -4,32 +4,52 @@
 
 ---
 
-## FICHA DE ACTIVIDADES N° 5 | Periféricos y Unidades de Medida
+## FICHA DE ACTIVIDADES N° 5 | Periféricos, Puertos y Unidades de Medida de la Información
 * **Módulo 1:** Alfabetización Informática-Computacional | **Clase:** 5
-* **Objetivo:** Clasificar periféricos y resolver cálculos prácticos con escalas de múltiplos digitales (Byte, KB, MB, GB, TB).
-
-#### ACTIVIDAD DESENCHUFADA (En Carpeta)
-1. **Tabla de Periféricos:** Clasificá los siguientes elementos colocando **E** (Entrada), **S** (Salida), **A** (Almacenamiento), **C** (Comunicación) o **M** (Mixto):
-   * [ ] Micrófono
-   * [ ] Auriculares
-   * [ ] Pantalla táctil de celular
-   * [ ] Disco de estado sólido (SSD)
-   * [ ] Placa de red Wi-Fi
-   * [ ] Teclado mecánico
-   * [ ] Proyector cañón
-   * [ ] Cámara web
-2. **Escala de Medidas:** Completá las equivalencias:
-   * $1 \text{ Byte} = \_\_\_\_\_\_$ bits.
-   * $1 \text{ Kilobyte (KB)} = \_\_\_\_\_\_$ Bytes.
-   * $1 \text{ Megabyte (MB)} = \_\_\_\_\_\_$ KB.
-   * $1 \text{ Gigabyte (GB)} = \_\_\_\_\_\_$ MB.
-   * $1 \text{ Terabyte (TB)} = \_\_\_\_\_\_$ GB.
-3. **Resolución de Problemas Prácticos:**
-   * **Problema 1:** Tenés un pendrive de $16 \text{ GB}$ completamente vacío. Si cada canción en MP3 pesa en promedio $4 \text{ MB}$, ¿cuántas canciones caben exactamente en el pendrive? *(Mostrá el cálculo paso a paso)*.
-   * **Problema 2:** Una foto de la cámara del celular pesa $3 \text{ MB}$. ¿Cuántos KB son? ¿Y cuántos Bytes?
-
-#### EXPANSIÓN DIGITAL
-* En el explorador de archivos, buscá 3 archivos distintos (.pdf, .mp3, .mp4), hacé clic derecho en "Propiedades" y anotá su tamaño exacto en Bytes y en MB.
-* **Cierre Reflexivo:** ¿Por qué un pendrive nuevo de 32 GB cuando lo conectás a la computadora dice que tiene ~29.8 GB libres?
+* **Objetivo:** Clasificar periféricos y puertos de conexión físicos, dominar la escala de magnitudes digitales (bit, byte, KB, MB, GB, TB) y resolver problemas de capacidad de almacenamiento real.
 
 ---
+
+### ACTIVIDAD DESENCHUFADA (En Carpeta)
+
+#### 1. Clasificación Funcional de Periféricos y Puertos
+Clasificá los siguientes dispositivos según sean de **Entrada (E)**, **Salida (S)**, **Almacenamiento (A)** o **Mixtos/Comunicación (M)**, e indicá con qué puerto o conector físico suelen conectarse (*USB, HDMI, VGA, Jack 3.5mm, RJ-45, Bluetooth*):
+
+| Dispositivo | Clasificación (E / S / A / M) | Puerto o Conector Típico |
+| :--- | :---: | :--- |
+| Teclado y Mouse | | |
+| Monitor de alta definición | | |
+| Pendrive / Disco Externo | | |
+| Auriculares con micrófono | | |
+| Placa de Red Ethernet | | |
+| Proyector antiguo de aula | | |
+| Impresora Multifunción | | |
+
+#### 2. Escala de Magnitudes y Tabla de Conversión
+Recordá la regla básica: $1 \text{ Byte} = 8 \text{ bits}$. Cada unidad superior equivale a $1.024$ unidades de la anterior ($2^{10}$):
+
+$$\text{Bit (b)} \longrightarrow \text{Byte (B)} \longrightarrow \text{Kilobyte (KB)} \longrightarrow \text{Megabyte (MB)} \longrightarrow \text{Gigabyte (GB)} \longrightarrow \text{Terabyte (TB)}$$
+
+Resolvé los siguientes problemas prácticos:
+* **Problema 1 (Capacidad):** Tenés un pendrive de $16\text{ GB}$.
+  * ¿Cuántos Megabytes ($\text{MB}$) de capacidad teórica tiene aproximadamente?  
+    *Cálculo:* $16 \times 1.024 = $ ____________________ $\text{MB}$.
+  * Si cada tema de música en MP3 pesa en promedio $4\text{ MB}$, ¿cuántas canciones entran en ese pendrive?  
+    *Cálculo:* _____________________________________________________________________________
+* **Problema 2 (Comparación de formatos):** Ordená de menor a mayor peso según su tamaño promedio en disco:
+  * `[ ]` Un video en HD de 10 minutos en formato MP4 ($350\text{ MB}$).
+  * `[ ]` Un archivo de texto simple sin formato `.txt` de 2 páginas ($12\text{ KB}$).
+  * `[ ]` Una fotografía de celular de 48 megapíxeles en JPG ($6\text{ MB}$).
+  * `[ ]` Una instalación completa de sistema operativo en imagen ISO ($4,5\text{ GB}$).
+  * `[ ]` Un mensaje corto de WhatsApp con 5 palabras ($30\text{ Bytes}$).
+
+#### 3. El Caso del "Disco Lleno"
+* Un estudiante compra un celular que la caja dice que es de $64\text{ GB}$. Al encenderlo por primera vez, el sistema le informa que solo tiene $51\text{ GB}$ libres.
+* ¿Por qué faltan esos $13\text{ GB}$? ¿Lo estafaron o tiene una explicación técnica vinculada al Sistema Operativo y las aplicaciones preinstaladas?  
+  _________________________________________________________________________________________
+
+---
+
+### EXPANSIÓN DIGITAL / LABORATORIO
+* En una computadora escolar o celular, hacé clic derecho en un archivo de texto, una foto y un video, y seleccioná **"Propiedades"**.
+* Compará el "Tamaño" con el "Tamaño en disco". Anotá las diferencias y explicá qué unidad de medida se utilizó en cada caso.

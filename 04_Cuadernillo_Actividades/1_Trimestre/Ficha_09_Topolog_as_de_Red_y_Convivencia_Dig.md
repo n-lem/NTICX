@@ -4,29 +4,47 @@
 
 ---
 
-## FICHA DE ACTIVIDADES N° 9 | Topologías de Red y Convivencia Digital
-* **Módulo 2:** Redes Digitales de Información | **Clase:** 9
-* **Efeméride:** *Semana de la Convivencia Escolar*
-* **Objetivo:** Analizar las topologías de red (Bus, Anillo, Estrella, Malla) y construir acuerdos de convivencia para los grupos digitales de la escuela.
-
-#### ACTIVIDAD DESENCHUFADA (En Carpeta)
-1. **Diseño de Topologías:** Dibujá esquemáticamente en tu carpeta una red de 5 computadoras conectadas en:
-   * a) Topología en Bus (cable central único).
-   * b) Topología en Anillo (círculo cerrado).
-   * c) Topología en Estrella (con un Switch central).
-   * d) Topología en Malla (interconectada).
-2. **Análisis de Fallas:**
-   * ¿Qué ocurre en una topología en Bus si se corta el cable troncal en la mitad?
-   * ¿Por qué la topología en Estrella es la que se utiliza en la sala de computación de la escuela y en las casas?
-3. **Taller de Convivencia Escolar en Redes:**
-   * Pensá en el grupo de WhatsApp del curso como una red social donde cada compañero es un "nodo".
-   * Escribí **3 reglas de oro para la convivencia digital**:
-     1. _____________________________________________________________________________
-     2. _____________________________________________________________________________
-     3. _____________________________________________________________________________
-
-#### EXPANSIÓN DIGITAL
-* Crear un diagrama de topología de red utilizando una herramienta de dibujo digital (LibreOffice Draw, Canva o software de diagramas).
-* **Cierre Reflexivo:** Cuando en un grupo digital se aísla o agrede a un compañero, ¿qué le pasa a la comunicación de toda la red?
+## FICHA DE ACTIVIDADES N° 9 | Topologías de Red y Pautas de Convivencia Digital
+* **Módulo 2:** Alfabetización en Redes Digitales de Información | **Clase:** 9
+* **Objetivo:** Analizar las topologías físicas de red (Bus, Anillo, Estrella, Malla) comparando ventajas y tolerancias a fallos, y reflexionar sobre las normas de convivencia en redes compartidas.
 
 ---
+
+### ACTIVIDAD DESENCHUFADA (En Carpeta)
+
+#### 1. Esquema Gráfico de Topologías
+Dibujá y completá el funcionamiento de cada topología de red:
+
+```
+TOPOLOGÍA EN BUS           TOPOLOGÍA EN ESTRELLA          TOPOLOGÍA EN ANILLO
+[PC]  [PC]  [PC]                 [PC]    [PC]                  [PC] ---> [PC]
+ |     |     |                     \      /                     ^         |
+============== (Cable central)      [SWITCH]                    |         v
+ |     |     |                     /      \                    [PC] <--- [PC]
+[PC]  [PC]  [PC]                 [PC]    [PC]
+```
+
+#### 2. Análisis de Fallos y Resiliencia
+Analizá qué ocurre en cada caso ante un problema técnico:
+* **Caso 1 (En red en Bus):** Si un estudiante tropieza con el cable central (*Backbone*) y lo corta a la mitad:  
+  * *¿Qué pasa con la comunicación de toda la red?*  
+    _________________________________________________________________________________________
+* **Caso 2 (En red en Estrella):** Si se rompe el cable de una sola computadora conectada al switch central:  
+  * *¿El resto de las computadoras del aula pueden seguir navegando y compartiendo archivos? Justificá.*  
+    _________________________________________________________________________________________
+* **Caso 3 (En red en Malla - como Internet):** Cada nodo está conectado con varios otros nodos simultáneamente.  
+  * *Si se corta una autopista de datos submarina, ¿por qué Internet no se cae por completo en todo el país?*  
+    _________________________________________________________________________________________
+
+#### 3. Convivencia en Redes: El Ancho de Banda es un Recurso Común
+* En la escuela, el ancho de banda del WiFi es compartido por cientos de celulares y netbooks.
+* Si un estudiante se pone a descargar un juego pesado de 15 GB o a reproducir videos en 4K durante la clase:
+  * ¿Cómo impacta esa acción individual en los compañeros que necesitan abrir un documento educativo?
+  * Proponé 2 normas comunitarias para cuidar la red escolar entre todos.  
+    1. ______________________________________________________________________________________  
+    2. ______________________________________________________________________________________
+
+---
+
+### EXPANSIÓN DIGITAL / LABORATORIO
+* Diseñá en el pizarrón o con la herramienta digital **LibreOffice Draw** el plano de la red del laboratorio de informática de la EES N° 33, indicando la ubicación del router, el switch y las computadoras en topología estrella.

@@ -872,4 +872,640 @@
 
 #### EXPANSIÓN DIGITAL
 * Publicación de los proyectos destacados en el sitio web de consulta de la materia.
-* **Cierre Reflexivo:** ¡Felicitaciones por completar el recorrido de NTICx! Ahora sos un ciudadano digital activo, crítico y con voz propia.
+* **Cierre Reflexivo:** ¡Felicitaciones por completar el recorrido de NTICx! Ahora sos un ciudadano digital activo, crítico y con voz propia.## 1° TRIMESTRE (Clases 1 a 12: Marzo a Mayo)
+
+# ESCUELA DE EDUCACIÓN SECUNDARIA N° 33 “16 DE SEPTIEMBRE”
+**Materia:** NTICx (4° 1°) | **Docente:** Nahuel Lemos | **Ciclo Lectivo:** 2026  
+**Estudiante:** __________________________________________________ | **Fecha:** ____/____/2026  
+
+---
+
+## FICHA DE ACTIVIDADES N° 1 | Encuadre Pedagógico, Diagnóstico y Contrato Didáctico
+* **Módulo:** Diagnóstico y Presentación | **Clase:** 1
+* **Objetivo:** Relevar el mapa de acceso y saberes previos del grupo, y acordar colectivamente las pautas de convivencia, consentimiento y uso responsable de la identidad digital en el aula.
+
+---
+
+### ACTIVIDAD DESENCHUFADA (En Carpeta)
+
+#### 1. Encuesta de Acceso y Hábitos Tecnológicos
+Respondé de manera sincera e individual (esta información ayuda al docente a planificar las clases según la realidad del curso):
+* **Dispositivo principal que usás:** `[ ] Celular propio` `[ ] Celular compartido` `[ ] Netbook / Notebook propia` `[ ] Computadora familiar` `[ ] Ninguno en casa`
+* **Conectividad en el hogar:** `[ ] WiFi fijo ilimitado` `[ ] Datos móviles prepagos (cargas semanales)` `[ ] Solo conexión en la escuela / espacios públicos`
+* **¿Qué hacés cuando se corta Internet o te quedás sin datos?**  
+  _________________________________________________________________________________________
+* **¿Qué diferencia creés que existe entre la memoria de un celular/computadora y el almacenamiento?**  
+  _________________________________________________________________________________________
+
+#### 2. Casos de Convivencia Digital: El "Contrato Didáctico" en Acción
+Leé las siguientes situaciones cotidianas y explicá cómo debería actuarse según el acuerdo escolar:
+* **Caso A (Identidad y consentimiento):** Durante una clase de computación, un estudiante le saca una foto graciosa a un compañero sin que se dé cuenta y la sube a una historia de Instagram o a un grupo de WhatsApp.
+  * *¿Por qué esta acción vulnera el derecho a la propia imagen y el contrato pedagógico?*  
+    _________________________________________________________________________________________
+* **Caso B (Uso del celular en el aula):** El docente propone una dinámica grupal y un integrante del equipo se aísla con auriculares jugando a un videojuego o mirando videos de TikTok.
+  * *¿Cómo afecta esto al trabajo colaborativo del equipo y qué pauta de convivencia se está pasando por alto?*  
+    _________________________________________________________________________________________
+
+#### 3. Cláusulas Colectivas del Contrato Didáctico
+Completá los 3 compromisos asumidos para este año escolar:
+1. **Escucha y palabra:** ________________________________________________________________
+2. **Cuidado de los equipos y del espacio (laboratorio/aula):** __________________________
+3. **Consentimiento digital:** No fotografiar, filmar ni difundir contenido de compañeros o docentes sin autorización explícita.
+
+---
+
+### EXPANSIÓN DIGITAL / LABORATORIO
+* En el celular o netbook, explorá la sección "Ajustes / Almacenamiento" y anotá:
+  * Espacio total del dispositivo: ________ GB
+  * Espacio ocupado por el Sistema Operativo: ________ GB
+  * Aplicación que más espacio consume: ____________________ (________ MB/GB)
+* **Reflexión grupal:** ¿Cuánto de ese espacio corresponde a contenidos creados por vos y cuánto a archivos temporales o basura digital?
+
+---
+
+# ESCUELA DE EDUCACIÓN SECUNDARIA N° 33 “16 DE SEPTIEMBRE”
+**Materia:** NTICx (4° 1°) | **Docente:** Nahuel Lemos | **Ciclo Lectivo:** 2026  
+**Estudiante:** __________________________________________________ | **Fecha:** ____/____/2026  
+
+---
+
+## FICHA DE ACTIVIDADES N° 2 | Técnica, Tecnología e Innovación: Las NTICx
+* **Módulo 1:** Alfabetización Informática-Computacional | **Clase:** 2
+* **Objetivo:** Diferenciar técnica, tecnología e innovación; reflexionar sobre la tecnofilia, la tecnofobia y la sociedad de la información; y comprender el rol transformador de la conectividad (la "x" de NTICx).
+
+---
+
+### ACTIVIDAD DESENCHUFADA (En Carpeta)
+
+#### 1. Diferenciación Conceptual Fundamental
+Completá el cuadro comparativo a partir de los conceptos trabajados en clase:
+
+| Concepto | Definición con tus palabras | Ejemplo concreto en la vida cotidiana |
+| :--- | :--- | :--- |
+| **Descubrimiento** | Hallazgo de algo que ya existía en la naturaleza pero no se conocía. | |
+| **Invención** | Creación de un artefacto o procedimiento totalmente nuevo que no existía. | |
+| **Innovación** | Modificación, mejora o aplicación novedosa de una tecnología ya inventada. | |
+
+#### 2. Lectura Crítica: Tecnofilia vs. Tecnofobia y el "Multitasking"
+Leé el siguiente fragmento adaptado de los cuadernillos de NTICx:
+> *"La tecnología cambió radicalmente la forma en que trabajamos y estudiamos. Hoy prevalece el Multitasking (la ilusión de hacer varias tareas a la vez con pantallas abiertas). La sensación es de hacer 100 cosas simultáneas y, al final del día, no haber profundizado en ninguna. Mientras los tecnofílicos celebran ciegamente cualquier artefacto nuevo sin cuestionarlo, los tecnofóbicos temen que la tecnología destruya lo humano. En el medio, los ciudadanos críticos eligen usarla con sentido y autonomía."*
+
+* **A.** Explicá con un ejemplo personal qué te pasa cuando intentás estudiar o hacer la tarea mientras respondés mensajes de WhatsApp o mirás notificaciones.  
+  _________________________________________________________________________________________
+* **B.** ¿Quiénes eran los *ludistas* durante la Revolución Industrial y qué relación tienen hoy con el debate sobre la Inteligencia Artificial y el empleo?  
+  _________________________________________________________________________________________
+
+#### 3. Clasificación de Artefactos y el Significado de la "X"
+Ubicá los siguientes elementos: *Hacha de piedra, Imprenta de tipos móviles, Telégrafo Morse, Computadora ENIAC (1946), Netbook con Huayra Linux, GPS en el celular, ChatGPT, Televisor blanco y negro analógico*:
+
+| Tecnología Tradicional / Manual | TIC (Analógica / Telecomunicación) | NTIC (Digital sin Red Masiva) | NTICx (Conectividad e Interactividad Ubicua) |
+| :--- | :--- | :--- | :--- |
+| | | | |
+
+* **Conclusión:** ¿Por qué la materia incorpora la letra **"x"** al final? (Pensá en conectividad, interactividad, redes y producción colectiva).  
+  _________________________________________________________________________________________
+
+---
+
+### EXPANSIÓN DIGITAL / LABORATORIO
+* En un documento de texto (LibreOffice Writer o Google Docs), creá una línea de tiempo visual titulada *"Evolución de un medio"* (ej: la música desde el disco de vinilo, el casete, el CD, el MP3 hasta Spotify).
+* Indicá qué cambios se produjeron en cada etapa en relación al espacio físico necesario y a la forma de compartir la información.
+
+---
+
+# ESCUELA DE EDUCACIÓN SECUNDARIA N° 33 “16 DE SEPTIEMBRE”
+**Materia:** NTICx (4° 1°) | **Docente:** Nahuel Lemos | **Ciclo Lectivo:** 2026  
+**Estudiante:** __________________________________________________ | **Fecha:** ____/____/2026  
+
+---
+
+## FICHA DE ACTIVIDADES N° 3 | Datos, Información y la Construcción de la Memoria Colectiva
+* **Módulo 1:** Alfabetización Informática-Computacional | **Clase:** 3
+* **Efeméride PBA:** Semana de la Memoria por la Verdad y la Justicia (24 de Marzo)
+* **Objetivo:** Diferenciar ontológica y computacionalmente dato, información y conocimiento, analizando el rol de las bases de datos y la digitalización en la preservación de la memoria histórica.
+
+---
+
+### ACTIVIDAD DESENCHUFADA (En Carpeta)
+
+#### 1. Datos vs. Información: De los Sentidos a la Computadora
+Leé la siguiente comparación:
+> *En el cuerpo humano, los sentidos captan estímulos aislados (un sonido agudo, un olor a quemado, una luz roja). Esos estímulos son **datos** brutos. Cuando el cerebro los procesa y contextualiza, se convierten en **información** ("hay un incendio cerca"), lo que permite tomar una decisión o generar **conocimiento** ("debo evacuar"). En informática ocurre lo mismo: los datos son símbolos sin significado propio; la información es el dato procesado con sentido.*
+
+Analizá la siguiente tabla con datos desordenados y respondé:
+
+| Registro | Campo A | Campo B | Campo C | Campo D |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | 16/09/1976 | La Plata | Estudiantes secundarios | Noche de los Lápices |
+| 2 | 30.000 | Argentina | 1976 - 1983 | Detenidos Desaparecidos |
+| 3 | 24/03/1976 | Buenos Aires | Golpe Cívico-Militar | Día Nacional de la Memoria |
+
+* **A.** ¿Qué son los elementos aislados como `16/09/1976` o `30.000`? ¿Tienen significado completo por sí solos?  
+  _________________________________________________________________________________________
+* **B.** ¿Cuándo y cómo esos elementos se transforman en **información comprensible**?  
+  _________________________________________________________________________________________
+* **C.** ¿Qué diferencia hay entre **almacenar datos** (ej: guardar un archivo en un disco) y **construir conocimiento** (ej: comprender el valor de los derechos humanos y la democracia)?  
+  _________________________________________________________________________________________
+
+#### 2. La Digitalización y la Preservación de la Memoria
+* Durante la última dictadura cívico-militar en Argentina se quemaron libros, se destruyeron prontuarios y se falsificaron identidades de recién nacidos.
+* ¿De qué manera la informática actual, las **bases de datos genéticas** (como el Banco Nacional de Datos Genéticos - BNDG) y la **digitalización de archivos históricos** permitieron a las Abuelas de Plaza de Mayo restituir la identidad de más de 130 nietos apropiados?  
+  _________________________________________________________________________________________
+  _________________________________________________________________________________________
+
+---
+
+### EXPANSIÓN DIGITAL / LABORATORIO
+* Accedé desde el navegador escolar o personal al sitio del **Archivo Nacional de la Memoria** o a la base digital de la **Comisión Provincial por la Memoria (CPM)**.
+* Identificá cómo está estructurada la ficha de búsqueda (campos de búsqueda: nombre, fecha, lugar, organismo). Explicá por qué una base de datos digital organizada es más eficiente y segura que un fichero de papel para preservar la historia de un pueblo.
+
+---
+
+# ESCUELA DE EDUCACIÓN SECUNDARIA N° 33 “16 DE SEPTIEMBRE”
+**Materia:** NTICx (4° 1°) | **Docente:** Nahuel Lemos | **Ciclo Lectivo:** 2026  
+**Estudiante:** __________________________________________________ | **Fecha:** ____/____/2026  
+
+---
+
+## FICHA DE ACTIVIDADES N° 4 | Arquitectura de la Computadora: El Modelo Von Neumann
+* **Módulo 1:** Alfabetización Informática-Computacional | **Clase:** 4
+* **Objetivo:** Comprender la estructura funcional interna de una computadora (CPU: UC y ALU; Memorias RAM y ROM; Buses y Periféricos) y el ciclo de procesamiento de instrucciones.
+
+---
+
+### ACTIVIDAD DESENCHUFADA (En Carpeta)
+
+#### 1. Diagrama de Bloques de Von Neumann
+Completá el diagrama conceptual ubicando las flechas de flujo de datos y control entre los siguientes componentes: **Unidad de Control (UC)**, **Unidad Aritmético-Lógica (ALU)**, **Memoria Principal (RAM)**, **Dispositivos de Entrada**, **Dispositivos de Salida** y **Almacenamiento Secundario**.
+
+```
+[ Dispositivos de Entrada ] ---> [                      ] ---> [ Dispositivos de Salida ]
+                                 [  C P U  (Procesador) ]
+                                 [   - UC: __________   ]
+                                 [   - ALU: _________   ]
+                                        ^      |
+                                        |      v
+                                 [  MEMORIA PRINCIPAL   ]
+                                 [      ( RAM )         ]
+                                        ^      |
+                                        |      v
+                                 [ ALMACENAMIENTO SEC.  ]
+                                 [  (Disco / SSD / USB) ]
+```
+
+#### 2. Relación de Términos y Funciones
+Uní con flechas cada componente con su tarea específica:
+
+| Componente | | Tarea Funcional |
+| :--- | :---: | :--- |
+| **A. Unidad de Control (UC)** | ● | ● Realiza cálculos matemáticos (sumas) y comparaciones lógicas. |
+| **B. Unidad Aritmético-Lógica (ALU)** | ● | ● Memoria no volátil que contiene las instrucciones de fábrica para iniciar el equipo (BIOS/UEFI). |
+| **C. Memoria RAM** | ● | ● Coordina y dirige el tráfico de datos, interpretando las instrucciones del programa. |
+| **D. Memoria ROM** | ● | ● Memoria de lectura y escritura ultrarrápida donde residen los programas en ejecución; se borra al apagarse. |
+| **E. Buses de Datos y Control** | ● | ● Autopistas de pistas electrónicas por donde circulan los impulsos eléctricos entre componentes. |
+
+#### 3. El Ciclo de Instrucción (La Computadora Humana)
+* En la dinámica de clase se simuló el cálculo: `Resultado = 5 + 3`.
+* Describí brevemente qué hizo cada rol en ese proceso:
+  * ¿Qué buscó la **Unidad de Control** en la Memoria RAM?  
+    _________________________________________________________________________________________
+  * ¿Qué operación ejecutó la **ALU**?  
+    _________________________________________________________________________________________
+  * ¿Dónde se escribió el resultado final?  
+    _________________________________________________________________________________________
+
+---
+
+### EXPANSIÓN DIGITAL / LABORATORIO
+* Inspección de una placa madre (*Motherboard*) en desuso o mediante un simulador digital local.
+* Identificá visualmente el zócalo del microprocesador (*Socket*), las ranuras para módulos de memoria RAM (*Slots DIMM*), los conectores SATA/M.2 de disco y los puertos de entrada/salida traseros.
+
+---
+
+# ESCUELA DE EDUCACIÓN SECUNDARIA N° 33 “16 DE SEPTIEMBRE”
+**Materia:** NTICx (4° 1°) | **Docente:** Nahuel Lemos | **Ciclo Lectivo:** 2026  
+**Estudiante:** __________________________________________________ | **Fecha:** ____/____/2026  
+
+---
+
+## FICHA DE ACTIVIDADES N° 5 | Periféricos, Puertos y Unidades de Medida de la Información
+* **Módulo 1:** Alfabetización Informática-Computacional | **Clase:** 5
+* **Objetivo:** Clasificar periféricos y puertos de conexión físicos, dominar la escala de magnitudes digitales (bit, byte, KB, MB, GB, TB) y resolver problemas de capacidad de almacenamiento real.
+
+---
+
+### ACTIVIDAD DESENCHUFADA (En Carpeta)
+
+#### 1. Clasificación Funcional de Periféricos y Puertos
+Clasificá los siguientes dispositivos según sean de **Entrada (E)**, **Salida (S)**, **Almacenamiento (A)** o **Mixtos/Comunicación (M)**, e indicá con qué puerto o conector físico suelen conectarse (*USB, HDMI, VGA, Jack 3.5mm, RJ-45, Bluetooth*):
+
+| Dispositivo | Clasificación (E / S / A / M) | Puerto o Conector Típico |
+| :--- | :---: | :--- |
+| Teclado y Mouse | | |
+| Monitor de alta definición | | |
+| Pendrive / Disco Externo | | |
+| Auriculares con micrófono | | |
+| Placa de Red Ethernet | | |
+| Proyector antiguo de aula | | |
+| Impresora Multifunción | | |
+
+#### 2. Escala de Magnitudes y Tabla de Conversión
+Recordá la regla básica: $1 \text{ Byte} = 8 \text{ bits}$. Cada unidad superior equivale a $1.024$ unidades de la anterior ($2^{10}$):
+
+$$\text{Bit (b)} \longrightarrow \text{Byte (B)} \longrightarrow \text{Kilobyte (KB)} \longrightarrow \text{Megabyte (MB)} \longrightarrow \text{Gigabyte (GB)} \longrightarrow \text{Terabyte (TB)}$$
+
+Resolvé los siguientes problemas prácticos:
+* **Problema 1 (Capacidad):** Tenés un pendrive de $16\text{ GB}$.
+  * ¿Cuántos Megabytes ($\text{MB}$) de capacidad teórica tiene aproximadamente?  
+    *Cálculo:* $16 \times 1.024 = $ ____________________ $\text{MB}$.
+  * Si cada tema de música en MP3 pesa en promedio $4\text{ MB}$, ¿cuántas canciones entran en ese pendrive?  
+    *Cálculo:* _____________________________________________________________________________
+* **Problema 2 (Comparación de formatos):** Ordená de menor a mayor peso según su tamaño promedio en disco:
+  * `[ ]` Un video en HD de 10 minutos en formato MP4 ($350\text{ MB}$).
+  * `[ ]` Un archivo de texto simple sin formato `.txt` de 2 páginas ($12\text{ KB}$).
+  * `[ ]` Una fotografía de celular de 48 megapíxeles en JPG ($6\text{ MB}$).
+  * `[ ]` Una instalación completa de sistema operativo en imagen ISO ($4,5\text{ GB}$).
+  * `[ ]` Un mensaje corto de WhatsApp con 5 palabras ($30\text{ Bytes}$).
+
+#### 3. El Caso del "Disco Lleno"
+* Un estudiante compra un celular que la caja dice que es de $64\text{ GB}$. Al encenderlo por primera vez, el sistema le informa que solo tiene $51\text{ GB}$ libres.
+* ¿Por qué faltan esos $13\text{ GB}$? ¿Lo estafaron o tiene una explicación técnica vinculada al Sistema Operativo y las aplicaciones preinstaladas?  
+  _________________________________________________________________________________________
+
+---
+
+### EXPANSIÓN DIGITAL / LABORATORIO
+* En una computadora escolar o celular, hacé clic derecho en un archivo de texto, una foto y un video, y seleccioná **"Propiedades"**.
+* Compará el "Tamaño" con el "Tamaño en disco". Anotá las diferencias y explicá qué unidad de medida se utilizó en cada caso.
+
+---
+
+# ESCUELA DE EDUCACIÓN SECUNDARIA N° 33 “16 DE SEPTIEMBRE”
+**Materia:** NTICx (4° 1°) | **Docente:** Nahuel Lemos | **Ciclo Lectivo:** 2026  
+**Estudiante:** __________________________________________________ | **Fecha:** ____/____/2026  
+
+---
+
+## FICHA DE ACTIVIDADES N° 6 | El Sistema Binario y la Codificación de Caracteres (ASCII)
+* **Módulo 1:** Alfabetización Informática-Computacional | **Clase:** 6
+* **Objetivo:** Comprender por qué las computadoras utilizan el sistema binario ($0$ y $1$), convertir números decimales a binario mediante tarjetas desenchufadas y decodificar caracteres según la tabla ASCII internacional.
+
+---
+
+### ACTIVIDAD DESENCHUFADA (En Carpeta)
+
+#### 1. El Juego de los Puntos (CS Unplugged)
+El sistema binario se basa en potencias de 2. Cada bit representa una tarjeta que puede estar **boca arriba (1 = prendido)** o **boca abajo (0 = apagado)**:
+
+| Tarjeta 5 ($2^4$) | Tarjeta 4 ($2^3$) | Tarjeta 3 ($2^2$) | Tarjeta 2 ($2^1$) | Tarjeta 1 ($2^0$) |
+| :---: | :---: | :---: | :---: | :---: |
+| **16 puntos** | **8 puntos** | **4 puntos** | **2 puntos** | **1 punto** |
+
+* Para representar el número **9**: Prendemos la tarjeta de 8 y la de 1 ($8 + 1 = 9$). Código: `0 1 0 0 1`.
+* Escribí el código binario de 5 bits para los siguientes números:
+  * Número **5:** Tarjetas prendidas: (___ + ___) $\longrightarrow$ Código binario: `_ _ _ _ _`
+  * Número **13:** Tarjetas prendidas: (___ + ___ + ___) $\longrightarrow$ Código binario: `_ _ _ _ _`
+  * Número **22:** Tarjetas prendidas: (___ + ___ + ___) $\longrightarrow$ Código binario: `_ _ _ _ _`
+  * Número **31:** Tarjetas prendidas: (todas prendidas) $\longrightarrow$ Código binario: `_ _ _ _ _`
+
+#### 2. La Tabla ASCII y la Transmisión de Palabras
+En computación, a cada tecla del teclado le corresponde un número decimal estándar (ASCII) que la máquina procesa en un byte (8 bits).
+
+**Fragmento de la tabla ASCII (Mayúsculas):**
+* `A = 65` | `B = 66` | `C = 67` | `D = 68` | `E = 69` | `F = 70` | `G = 71` | `H = 72` | `I = 73`
+* `L = 76` | `M = 77` | `N = 78` | `O = 79` | `P = 80` | `R = 82` | `S = 83` | `T = 84` | `U = 85`
+
+* **A. El Caso de la palabra "CASA":**
+  * `C = 67` $\longrightarrow$ En binario de 8 bits: `0 1 0 0 0 0 1 1` ($64 + 2 + 1$)
+  * `A = 65` $\longrightarrow$ En binario de 8 bits: `0 1 0 0 0 0 0 1` ($64 + 1$)
+  * `S = 83` $\longrightarrow$ En binario de 8 bits: `0 1 0 1 0 0 1 1` ($64 + 16 + 2 + 1$)
+  * `A = 65` $\longrightarrow$ En binario de 8 bits: `0 1 0 0 0 0 0 1` ($64 + 1$)
+  * *¿Cuántos bits en total ocupó transmitir la palabra "CASA"?*  
+    $4 \text{ letras} \times 8 \text{ bits} = $ ________ bits (es decir, ________ Bytes).
+
+* **B. Desafío Individual:** Codificá en código ASCII y luego en binario tu propio **primer nombre** (o las primeras 4 letras si es largo):
+  * Letra 1: ____ $\longrightarrow$ Valor ASCII: ____ $\longrightarrow$ Binario (8 bits): `_ _ _ _ _ _ _ _`
+  * Letra 2: ____ $\longrightarrow$ Valor ASCII: ____ $\longrightarrow$ Binario (8 bits): `_ _ _ _ _ _ _ _`
+  * Letra 3: ____ $\longrightarrow$ Valor ASCII: ____ $\longrightarrow$ Binario (8 bits): `_ _ _ _ _ _ _ _`
+  * Letra 4: ____ $\longrightarrow$ Valor ASCII: ____ $\longrightarrow$ Binario (8 bits): `_ _ _ _ _ _ _ _`
+
+#### 3. Pregunta Conceptual
+* ¿Por qué una computadora —por más potente y avanzada que sea— internamente solo puede entender ceros y unos ($0$ y $1$) y no letras o palabras en español directamente? (Pensá en los circuitos electrónicos y la presencia/ausencia de corriente eléctrica).  
+  _________________________________________________________________________________________
+
+---
+
+### EXPANSIÓN DIGITAL / LABORATORIO
+* En la computadora, abrí el Bloc de Notas (*Notepad* o *Mousepad* en Linux).
+* Mantené presionada la tecla `ALT` en el teclado numérico y escribí el número `64`. Al soltar, aparecerá el símbolo `@` (Arroba).
+* Probá combinaciones (`ALT + 164` para la `ñ`, `ALT + 168` para `¿`). Explicá por qué este atajo demuestra que detrás de cada carácter visible hay un código numérico binario.
+
+---
+
+# ESCUELA DE EDUCACIÓN SECUNDARIA N° 33 “16 DE SEPTIEMBRE”
+**Materia:** NTICx (4° 1°) | **Docente:** Nahuel Lemos | **Ciclo Lectivo:** 2026  
+**Estudiante:** __________________________________________________ | **Fecha:** ____/____/2026  
+
+---
+
+## FICHA DE ACTIVIDADES N° 7 | Sistemas Operativos: Propietario vs. Software Libre
+* **Módulo 1:** Alfabetización Informática-Computacional | **Clase:** 7
+* **Objetivo:** Comprender las funciones básicas de un Sistema Operativo, diferenciar software propietario de Software Libre (GNU/Linux - Huayra) y reflexionar sobre la soberanía tecnológica.
+
+---
+
+### ACTIVIDAD DESENCHUFADA (En Carpeta)
+
+#### 1. ¿Qué hace un Sistema Operativo?
+Completá el mapa conceptual indicando las 3 funciones básicas de cualquier Sistema Operativo (Windows, GNU/Linux, Android, iOS):
+* **A. Administrar el hardware:** (gestionar procesador, memoria RAM, discos y periféricos).
+* **B. Brindar la interfaz de usuario:** (permitir que la persona interactúe mediante ventanas, iconos o comandos).
+* **C. Gestionar el sistema de archivos:** (organizar carpetas, permisos y almacenamiento de datos).
+
+#### 2. Las Cuatro Libertades del Software Libre (Richard Stallman / FSF)
+Leé atentamente los principios del Software Libre y respondé:
+* **Libertad 0:** Libertad de usar el programa con cualquier propósito.
+* **Libertad 1:** Libertad de estudiar cómo funciona el programa y modificarlo para adaptarlo a tus necesidades.
+* **Libertad 2:** Libertad de distribuir copias para ayudar a la comunidad.
+* **Libertad 3:** Libertad de mejorar el programa y publicar esas mejoras para beneficio de todos.
+
+**Cuadro Comparativo:**
+
+| Característica | Software Propietario (ej: Windows, MS Office) | Software Libre (ej: GNU/Linux Huayra, LibreOffice) |
+| :--- | :--- | :--- |
+| **Acceso al código fuente** | Cerrado y secreto; prohibido modificarlo. | Abierto y accesible para auditoría y aprendizaje. |
+| **Costo y licencias** | Requiere pago de licencia por máquina o abono. | Gratuito para descargar, usar y compartir. |
+| **Soberanía del usuario** | La empresa puede decidir discontinuar el soporte o recopilar datos. | El usuario y la comunidad tienen control total sobre sus datos. |
+
+#### 3. Debate Situado: ¿Por qué Conectar Igualdad eligió Huayra Linux?
+* El Estado argentino desarrolló su propia distribución de software libre (**Huayra GNU/Linux**) para las netbooks escolares entregadas a estudiantes secundarios.
+* ¿Qué ventajas tiene para una escuela pública bonaerense usar un sistema operativo libre en lugar de depender de licencias comerciales extranjeras que vencen o exigen pagos en dólares?  
+  _________________________________________________________________________________________
+  _________________________________________________________________________________________
+
+---
+
+### EXPANSIÓN DIGITAL / LABORATORIO
+* En la netbook o PC del laboratorio, iniciá sesión en Huayra GNU/Linux (o explorá un entorno Linux/LibreOffice).
+* Abrí la terminal de comandos (*Terminal*) y escribí `uname -a`. Observá la información sobre el kernel libre.
+* Creá un documento en LibreOffice Writer y guardalo en formato estándar abierto `.odt` (OpenDocument Text) en lugar de `.docx`. Explicá por qué los formatos abiertos garantizan que tus archivos se puedan abrir en el futuro sin pagar licencias.
+
+---
+
+# ESCUELA DE EDUCACIÓN SECUNDARIA N° 33 “16 DE SEPTIEMBRE”
+**Materia:** NTICx (4° 1°) | **Docente:** Nahuel Lemos | **Ciclo Lectivo:** 2026  
+**Estudiante:** __________________________________________________ | **Fecha:** ____/____/2026  
+
+---
+
+## FICHA DE ACTIVIDADES N° 8 | Introducción a las Redes Informáticas y Medios de Transmisión
+* **Módulo 2:** Alfabetización en Redes Digitales de Información | **Clase:** 8
+* **Objetivo:** Definir qué es una red informática, diferenciar medios guiados de no guiados, y clasificar las redes según su alcance geográfico (PAN, LAN, MAN, WAN).
+
+---
+
+### ACTIVIDAD DESENCHUFADA (En Carpeta)
+
+#### 1. Concepto y Finalidad de una Red
+* **Definición:** Una red informática es un conjunto de computadoras y dispositivos interconectados entre sí mediante medios físicos o inalámbricos con el objetivo de **compartir recursos, archivos, impresoras y servicios**.
+* Mencioná 3 ventajas concretas que tiene tener las computadoras de la escuela conectadas en red frente a tener máquinas aisladas que no se comunican entre sí:
+  1. ______________________________________________________________________________________
+  2. ______________________________________________________________________________________
+  3. ______________________________________________________________________________________
+
+#### 2. Clasificación por Alcance Geográfico
+Ubicá en el mapa de escala las siglas correspondientes: **PAN** (*Personal Area Network*), **LAN** (*Local Area Network*), **MAN** (*Metropolitan Area Network*) y **WAN** (*Wide Area Network*):
+
+| Tipo de Red | Alcance Típico | Ejemplo Cotidiano |
+| :---: | :--- | :--- |
+| **PAN** | 1 a 10 metros | Conectar auriculares Bluetooth al teléfono celular. |
+| **LAN** | Una habitación, aula o edificio | Red del laboratorio de la EES N° 33 o WiFi de tu casa. |
+| **MAN** | Una ciudad o municipio | Red interhospitalaria de José C. Paz o cámaras de seguridad urbanas. |
+| **WAN** | País, continente o el planeta entero | La red mundial **Internet**. |
+
+#### 3. Medios Guiados vs. No Guiados (La Infraestructura Invisible)
+* **Medios Guiados (Por cable):**
+  * *Cable de Par Trenzado (UTP - Conector RJ-45):* El cable de red clásico de las escuelas. Ventaja: económico y fácil de reparar. Limitación: alcance máximo de 100 metros sin repetidor.
+  * *Fibra Óptica:* Hilos de vidrio por donde viaja la información mediante pulsos de luz láser. Ventaja: velocidades altísimas y total inmunidad a tormentas eléctricas.
+* **Medios No Guiados (Inalámbricos):**
+  * *WiFi:* Ondas de radiofrecuencia de corto alcance.
+  * *Satelital:* Microondas enviadas a satélites geoestacionarios para zonas rurales sin tendido de cables.
+* **Pregunta de análisis:** ¿Por qué cuando hay tormenta eléctrica el WiFi de tu casa puede sufrir microcortes o interferencias, mientras que una conexión de fibra óptica subterránea permanece estable?  
+  _________________________________________________________________________________________
+
+---
+
+### EXPANSIÓN DIGITAL / LABORATORIO
+* Inspeccioná los conectores y cables del laboratorio o de tu casa:
+  * Identificá un cable UTP y observá los 8 cables trenzados de colores dentro de la ficha transparente RJ-45.
+  * Observá la parte trasera del módem/router escolar y ubicá los puertos LAN (amarillos) y el puerto WAN/Internet (azul o conector de fibra).
+
+---
+
+# ESCUELA DE EDUCACIÓN SECUNDARIA N° 33 “16 DE SEPTIEMBRE”
+**Materia:** NTICx (4° 1°) | **Docente:** Nahuel Lemos | **Ciclo Lectivo:** 2026  
+**Estudiante:** __________________________________________________ | **Fecha:** ____/____/2026  
+
+---
+
+## FICHA DE ACTIVIDADES N° 9 | Topologías de Red y Pautas de Convivencia Digital
+* **Módulo 2:** Alfabetización en Redes Digitales de Información | **Clase:** 9
+* **Objetivo:** Analizar las topologías físicas de red (Bus, Anillo, Estrella, Malla) comparando ventajas y tolerancias a fallos, y reflexionar sobre las normas de convivencia en redes compartidas.
+
+---
+
+### ACTIVIDAD DESENCHUFADA (En Carpeta)
+
+#### 1. Esquema Gráfico de Topologías
+Dibujá y completá el funcionamiento de cada topología de red:
+
+```
+TOPOLOGÍA EN BUS           TOPOLOGÍA EN ESTRELLA          TOPOLOGÍA EN ANILLO
+[PC]  [PC]  [PC]                 [PC]    [PC]                  [PC] ---> [PC]
+ |     |     |                     \      /                     ^         |
+============== (Cable central)      [SWITCH]                    |         v
+ |     |     |                     /      \                    [PC] <--- [PC]
+[PC]  [PC]  [PC]                 [PC]    [PC]
+```
+
+#### 2. Análisis de Fallos y Resiliencia
+Analizá qué ocurre en cada caso ante un problema técnico:
+* **Caso 1 (En red en Bus):** Si un estudiante tropieza con el cable central (*Backbone*) y lo corta a la mitad:  
+  * *¿Qué pasa con la comunicación de toda la red?*  
+    _________________________________________________________________________________________
+* **Caso 2 (En red en Estrella):** Si se rompe el cable de una sola computadora conectada al switch central:  
+  * *¿El resto de las computadoras del aula pueden seguir navegando y compartiendo archivos? Justificá.*  
+    _________________________________________________________________________________________
+* **Caso 3 (En red en Malla - como Internet):** Cada nodo está conectado con varios otros nodos simultáneamente.  
+  * *Si se corta una autopista de datos submarina, ¿por qué Internet no se cae por completo en todo el país?*  
+    _________________________________________________________________________________________
+
+#### 3. Convivencia en Redes: El Ancho de Banda es un Recurso Común
+* En la escuela, el ancho de banda del WiFi es compartido por cientos de celulares y netbooks.
+* Si un estudiante se pone a descargar un juego pesado de 15 GB o a reproducir videos en 4K durante la clase:
+  * ¿Cómo impacta esa acción individual en los compañeros que necesitan abrir un documento educativo?
+  * Proponé 2 normas comunitarias para cuidar la red escolar entre todos.  
+    1. ______________________________________________________________________________________  
+    2. ______________________________________________________________________________________
+
+---
+
+### EXPANSIÓN DIGITAL / LABORATORIO
+* Diseñá en el pizarrón o con la herramienta digital **LibreOffice Draw** el plano de la red del laboratorio de informática de la EES N° 33, indicando la ubicación del router, el switch y las computadoras en topología estrella.
+
+---
+
+# ESCUELA DE EDUCACIÓN SECUNDARIA N° 33 “16 DE SEPTIEMBRE”
+**Materia:** NTICx (4° 1°) | **Docente:** Nahuel Lemos | **Ciclo Lectivo:** 2026  
+**Estudiante:** __________________________________________________ | **Fecha:** ____/____/2026  
+
+---
+
+## FICHA DE ACTIVIDADES N° 10 | Modelos de Red: Cliente-Servidor, Redes P2P y Cloud Computing
+* **Módulo 2:** Alfabetización en Redes Digitales de Información | **Clase:** 10
+* **Objetivo:** Comparar la arquitectura centralizada Cliente-Servidor con las redes descentralizadas entre pares (P2P), y analizar el modelo de la "nube" (*Cloud Computing*).
+
+---
+
+### ACTIVIDAD DESENCHUFADA (En Carpeta)
+
+#### 1. Cuadro Comparativo: Cliente-Servidor vs. P2P (Peer-to-Peer)
+Completá el cuadro comparativo a partir de las analogías trabajadas en clase:
+
+| Dimensión | Modelo Cliente-Servidor (ej: Web, Gmail, Instagram) | Redes P2P entre Pares (ej: BitTorrent, Blockchain) |
+| :--- | :--- | :--- |
+| **Jerarquía** | Asimétrica: hay un servidor central que tiene los datos y clientes que los piden. | Simétrica y horizontal: todos los nodos son a la vez clientes y servidores. |
+| **Punto central de falla** | Si se cae el servidor central, ningún cliente puede acceder al servicio. | No hay servidor central: si un nodo se desconecta, la red sigue funcionando. |
+| **Velocidad al sumar usuarios** | Si millones entran al mismo tiempo, el servidor se satura o colapsa. | Cuantos más usuarios comparten un archivo, más rápida y distribuida es la descarga. |
+
+#### 2. Desmitificando "La Nube" (*Cloud Computing*)
+Leé la siguiente frase célebre de los defensores del software libre:
+> *"No existe la nube; simplemente es la computadora de otra persona conectada a Internet."*
+
+* **A.** Cuando subís fotos a Google Drive o escuchás música en Spotify, ¿dónde están guardados físicamente esos archivos?  
+  _________________________________________________________________________________________
+* **B.** ¿Cuáles son las ventajas de la nube (ej: acceder desde cualquier lugar sin pendrive) y qué riesgos implica para la **privacidad y soberanía de nuestros datos**?  
+  _________________________________________________________________________________________
+
+#### 3. Intranet vs. Extranet vs. Internet
+* **Intranet:** Red privada interna a la que solo acceden los miembros de una organización (ej: el sistema interno de secretaría escolar de la escuela).
+* **Extranet:** Red privada que permite el acceso controlado a usuarios externos autorizados (ej: portal para que las familias vean boletines de notas).
+* **Internet:** La red pública global de alcance planetario.
+* Escribí un ejemplo de uso para cada una en el ámbito de una escuela secundaria bonaerense.
+
+---
+
+### EXPANSIÓN DIGITAL / LABORATORIO
+* En la computadora o celular, abrí el navegador y entrá a un servicio de almacenamiento en la nube (Google Drive / OneDrive / Nextcloud).
+* Subí un archivo de texto y compartilo mediante un enlace configurado con permisos de **"Solo lectura"** y luego con permisos de **"Editor"**.
+* Explicá la diferencia entre enviar un archivo adjunto por correo (crear una copia estática) y compartir un enlace a la nube (editar el mismo archivo en tiempo real).
+
+---
+
+# ESCUELA DE EDUCACIÓN SECUNDARIA N° 33 “16 DE SEPTIEMBRE”
+**Materia:** NTICx (4° 1°) | **Docente:** Nahuel Lemos | **Ciclo Lectivo:** 2026  
+**Estudiante:** __________________________________________________ | **Fecha:** ____/____/2026  
+
+---
+
+## FICHA DE ACTIVIDADES N° 11 | El Protocolo TCP/IP y el Viaje de un Mensaje en Internet
+* **Módulo 2:** Alfabetización en Redes Digitales de Información | **Clase:** 11
+* **Objetivo:** Comprender cómo viaja la información en Internet mediante la conmutación de paquetes, el rol del protocolo TCP/IP, las direcciones IP y el sistema de nombres de dominio (DNS).
+
+---
+
+### ACTIVIDAD DESENCHUFADA (En Carpeta)
+
+#### 1. ¿Cómo Viaja un Mensaje en Internet? (La Carta Fragmentada)
+Imaginá que querés enviar una foto de $10\text{ MB}$ por WhatsApp desde José C. Paz a un familiar en Mar del Plata. Internet **no** envía un bloque sólido de 10 MB entero por el cable, sino que lo divide en miles de pequeños **paquetes de datos**.
+
+**Estructura de un Paquete de Datos:**
+Cada paquete lleva una "etiqueta" o cabecera que contiene:
+* `IP de Origen:` Quién lo manda (ej: `192.168.1.15`).
+* `IP de Destino:` A quién va dirigido (ej: `181.45.22.90`).
+* `Número de secuencia:` Paquete 1 de 500, Paquete 2 de 500, etc.
+* `Carga útil (Payload):` El pedacito de foto codificado en binario.
+* `Verificación de errores (Checksum):` Código para comprobar que no se rompió en el camino.
+
+**El Rol del Protocolo TCP/IP:**
+* **IP (Internet Protocol):** Se encarga de poner las direcciones y de que los enrutadores (*routers*) dirijan los paquetes por los caminos más rápidos de la red (incluso si toman rutas distintas).
+* **TCP (Transmission Control Protocol):** Se encarga de partir el archivo al salir, verificar que hayan llegado todos los paquetes sin errores en destino y reordenarlos en el orden exacto. Si falta un paquete, pide que se reenvíe.
+
+#### 2. Cuestionario de Aplicación
+* **A.** ¿Qué ventajas tiene dividir un archivo en paquetes pequeños en lugar de transmitirlo como un bloque continuo? (Pensá en qué pasaría si hay una interferencia en el cable en el 99% de la descarga).  
+  _________________________________________________________________________________________
+* **B.** ¿Qué es una **Dirección IP** y por qué cada dispositivo conectado a una red necesita tener una asignada?  
+  _________________________________________________________________________________________
+* **C.** ¿Qué función cumple el servidor **DNS (Domain Name System)** cuando en el navegador escribís `www.abc.gob.ar` en lugar de una seguidilla de números como `186.33.221.14`?  
+  _________________________________________________________________________________________
+
+---
+
+### EXPANSIÓN DIGITAL / LABORATORIO
+* En una computadora con Windows o Huayra Linux, abrí la consola de comandos (**cmd** o **Terminal**).
+* Escribí `ping www.google.com.ar` y presioná Enter:
+  * Observá la dirección IP que te responde. Anotala: ____________________
+  * Observá el tiempo de respuesta (latencia en milisegundos): ________ ms
+* Escribí `traceroute www.google.com.ar` (o `tracert` en Windows) y observá todos los "saltos" (routers intermedios) que atraviesa tu señal hasta llegar al destino.
+
+---
+
+# ESCUELA DE EDUCACIÓN SECUNDARIA N° 33 “16 DE SEPTIEMBRE”
+**Materia:** NTICx (4° 1°) | **Docente:** Nahuel Lemos | **Ciclo Lectivo:** 2026  
+**Estudiante:** __________________________________________________ | **Fecha:** ____/____/2026  
+
+---
+
+## FICHA DE ACTIVIDADES N° 12 | Integración y Repaso General del 1° Trimestre
+* **Módulos 1 y 2:** Alfabetización Informática y Redes Digitales | **Clase:** 12
+* **Objetivo:** Integrar y afianzar los conceptos fundamentales del 1° Trimestre (hardware, Von Neumann, binario, unidades de medida, software libre, topologías y TCP/IP) para la Evaluación Integradora N° 1 y el informe RITE 1.
+
+---
+
+### ACTIVIDAD DESENCHUFADA (En Carpeta - Guía de Estudio RITE)
+
+#### 1. Mapa Conceptual Integrador de Informática y Computación
+Completá los casilleros en blanco para reconstruir el sistema computacional:
+
+```
+                          INFORMÁTICA
+                               |
+            +------------------+------------------+
+            |                                     |
+       [ HARDWARE ]                          [ SOFTWARE ]
+ (Parte física y tangible)            (Parte lógica e intangible)
+            |                                     |
+   +--------+--------+                   +--------+--------+
+   |                 |                   |                 |
+[ CPU ]         [ MEMORIAS ]      [ SISTEMA OP. ]    [ APLICACIONES ]
+- UC: _____     - RAM: _____      - Libre: _____     - Ofimática: ___
+- ALU: ____     - ROM: _____      - Propietario: ___ - Navegadores
+```
+
+#### 2. Batería de Problemas Rápidos de Examen
+* **Ejercicio A (Binario a Decimal):** Convertí el siguiente código binario de 5 bits a número decimal:  
+  `1 0 1 1 0` $\longrightarrow$ ($16 \times 1 + 8 \times 0 + 4 \times 1 + 2 \times 1 + 1 \times 0$) = ________
+* **Ejercicio B (Cálculo de Almacenamiento):** Un examen en PDF pesa $512\text{ KB}$.  
+  ¿Cuántos exámenes completos en PDF entran en un pendrive de $2\text{ GB}$?  
+  *Pistas:* $2\text{ GB} = 2.048\text{ MB} = 2.097.152\text{ KB}$.  
+  *Cálculo:* _____________________________________________________________________________
+* **Ejercicio C (Redes y Protocolos):** Explicá con tus palabras qué diferencia hay entre una red en **Estrella** y una red en **Bus**, y por qué en la escuela se utiliza la topología estrella con switches.  
+  _________________________________________________________________________________________
+  _________________________________________________________________________________________
+* **Ejercicio D (Software Libre):** Mencioná las 4 libertades esenciales del Software Libre y por qué usar Huayra Linux promueve la soberanía educativa.  
+  _________________________________________________________________________________________
+
+#### 3. Autoevaluación de Trayectoria Educativa (RITE)
+Marcá con una cruz según tu propio balance del trimestre:
+* `[ ]` **TEA (Avanzada):** Entiendo los temas, tengo la carpeta al día y puedo explicar cómo funciona una computadora y una red.
+* `[ ]` **TEP (En Proceso):** Hay temas que me cuestan (como binario o unidades de medida) y necesito repasar las fichas.
+* `[ ]` **TED (Discontinua):** Tengo actividades incompletas y debo intensificar saberes antes del cierre.
+
+---
+
+### EXPANSIÓN DIGITAL / LABORATORIO
+* Revisión integral de la carpeta de trabajo y verificación de que las 12 fichas del 1° Trimestre estén firmadas y visadas por el docente para la acreditación formal.
+
+---
+
+
