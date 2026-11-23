@@ -143,20 +143,42 @@
     </section>
 
     <section class="activity-card" id="armado-pc" aria-labelledby="armado-pc-title">
-      <h2 id="armado-pc-title">🧩 Armá una computadora</h2>
-      <p>Elegí componentes para una biblioteca que necesita navegar y editar documentos. El presupuesto ficticio es de 700 puntos. Las piezas y precios son ejemplos, no recomendaciones de compra.</p>
+      <h2 id="armado-pc-title">🧩 Rompecabezas de la computadora</h2>
+      <p>Construí tu computadora combinando componentes, dispositivos y programas. Después descubrí qué podrías hacer con tu elección.</p>
+      <p class="activity-hint">Elegí una pieza y tocá «Colocar» en la zona resaltada, o arrastrala con el mouse. Para quitar una pieza, hacé clic o tocala una vez colocada. También podés usar Tab y Enter.</p>
+      <p class="activity-hint">Es un esquema para aprender categorías, no una PC completa: no representa el almacenamiento, la alimentación ni el sistema operativo. Las posibilidades mostradas son ejemplos simplificados.</p>
       <form id="pc-form" class="activity-form">
-        <label for="pc-cpu">Procesador</label>
-        <select id="pc-cpu"><option value="basico">Básico, plataforma A — 150 puntos</option><option value="avanzado">Avanzado, plataforma B — 300 puntos</option></select>
-        <label for="pc-board">Placa madre</label>
-        <select id="pc-board"><option value="a">Plataforma A — 150 puntos</option><option value="b">Plataforma B — 200 puntos</option></select>
-        <label for="pc-ram">Memoria RAM</label>
-        <select id="pc-ram"><option value="4">4 GB — 80 puntos</option><option value="8">8 GB — 120 puntos</option><option value="16">16 GB — 200 puntos</option></select>
-        <label for="pc-storage">Almacenamiento</label>
-        <select id="pc-storage"><option value="128">SSD 128 GB — 80 puntos</option><option value="256">SSD 256 GB — 120 puntos</option><option value="512">SSD 512 GB — 200 puntos</option></select>
-        <button class="btn-detail activity-button" type="submit">Revisar equipo</button>
+        <div class="pc-workbench">
+          <div class="pc-parts" id="pc-parts">
+            <h3>1. Elegí las piezas</h3>
+            <div id="pc-palette"></div>
+          </div>
+          <div class="pc-build">
+            <h3>2. Armá tu computadora</h3>
+            <p id="pc-selection" class="pc-selection" role="status" aria-live="polite">Elegí una pieza para empezar.</p>
+            <div class="pc-motherboard">
+              <h4>Placa madre <span>· conecta los componentes</span></h4>
+              <div class="pc-slot" data-pc-slot="cpu" role="group"></div>
+              <div class="pc-slot" data-pc-slot="ram" role="group"></div>
+            </div>
+            <p class="pc-connection">↕ Periféricos conectados mediante puertos</p>
+            <div class="pc-peripherals">
+              <div class="pc-slot" data-pc-slot="entrada" role="group"></div>
+              <div class="pc-slot" data-pc-slot="salida" role="group"></div>
+            </div>
+            <div class="pc-software">
+              <h4>Programas <span>· no son piezas físicas</span></h4>
+              <div class="pc-slot" data-pc-slot="software" role="group"></div>
+            </div>
+            <a class="pc-back-parts" href="#pc-parts">↑ Volver a las piezas</a>
+          </div>
+        </div>
+        <div class="activity-controls">
+          <button class="btn-detail activity-button" type="submit">¿Qué puedo hacer?</button>
+          <button id="pc-reset" class="btn-detail activity-button" type="button">Empezar de nuevo</button>
+        </div>
       </form>
-      <p id="pc-result" class="activity-result" role="status" aria-live="polite"></p>
+      <div id="pc-result" class="activity-result" role="status" aria-live="polite"></div>
     </section>
 
     <section class="activity-card" id="datos-informacion" aria-labelledby="datos-title">
@@ -241,6 +263,18 @@
         <input id="packet-message" type="text" maxlength="30" autocomplete="off" required>
         <button class="btn-detail activity-button" type="submit">Enviar mensaje</button>
       </form>
+      <div class="network-simulator" aria-label="Representación visual de la red">
+        <div class="network-endpoints"><strong>💻 Emisor</strong><strong>🌐 Red simulada</strong><strong>📥 Receptor</strong></div>
+        <div class="network-path" data-packet="1"><span class="packet-token">1</span></div>
+        <div class="network-path" data-packet="2"><span class="packet-token">2</span></div>
+        <div class="network-path" data-packet="3"><span class="packet-token">3</span></div>
+        <p class="network-caption">Cada ficha representa una parte del mensaje. La animación es una simplificación.</p>
+        <div class="packet-inbox" aria-label="Partes recibidas en orden">
+          <span id="packet-inbox-1">1 · esperando</span>
+          <span id="packet-inbox-2">2 · esperando</span>
+          <span id="packet-inbox-3">3 · esperando</span>
+        </div>
+      </div>
       <div id="packet-result" class="activity-result" role="status" aria-live="polite">Todavía no se envió ningún mensaje.</div>
       <button id="packet-retry" class="btn-detail activity-button" type="button" disabled>Retransmitir parte perdida</button>
     </section>
@@ -515,7 +549,7 @@
     </nav>
     <section class="activity-card" id="storyboard" aria-labelledby="storyboard-title">
       <h2 id="storyboard-title">🎬 Armá un storyboard</h2>
-      <p>Ordená tres escenas para contar una historia sobre el cuidado de la biblioteca. Describí qué ocurre y elegí sonido y transición. Usá las flechas de cada escena para cambiar el orden.</p>
+      <p>Ordená las viñetas para contar una historia sobre el cuidado de la biblioteca. Arrastrá el asa de cada viñeta con el mouse o usá los botones para moverla con teclado o pantalla táctil. Las ilustraciones son una guía y no cambian al editar el texto.</p>
       <p class="activity-hint">No ingreses datos personales. Solo se guarda en este navegador si elegís «Guardar».</p>
       <div id="story-scenes"></div>
       <div class="activity-controls">

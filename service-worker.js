@@ -1,6 +1,6 @@
 importScripts("./offline-manifest.js");
 
-const CACHE_NAME = `nticx-offline-${self.NTICX_OFFLINE_VERSION}-actividades-6`;
+const CACHE_NAME = `nticx-offline-${self.NTICX_OFFLINE_VERSION}-actividades-10`;
 const APP_SHELL = [
   "index.html",
   "actividades.html",
