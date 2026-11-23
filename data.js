@@ -14,14 +14,13 @@ const NTICX_DATA = {
   },
 
   modulos: [
-    { id: 1, nombre: "Alfabetización Informática-Computacional", trim: 1, clases: "Clases 1 a 7", icono: "💻", descripcion: "Hardware, modelo Von Neumann, sistema binario, periféricos, unidades de medida y Software Libre (Huayra)." },
-    { id: 2, nombre: "Redes Digitales de Información", trim: 1, clases: "Clases 8 a 11", icono: "🌐", descripcion: "Topologías de red, medios guiados y fibra óptica, Cliente-Servidor, P2P, TCP/IP y Cloud Computing." },
-    { id: 3, nombre: "Manejo de la Información", trim: 2, clases: "Clases 13 a 16", icono: "🔍", descripcion: "La World Wide Web, operadores booleanos, curaduría contra infoxicación, evolución Web 1.0 a 4.0 e inteligencia colectiva." },
-    { id: 4, nombre: "Componentes de Imagen Visual", trim: 2, clases: "Clases 17 a 20", icono: "🎨", descripcion: "Semiótica de Peirce, lectura denotativa y connotativa, marcas (logotipo, isotipo, isologo) y retórica publicitaria." },
-    { id: 5, nombre: "Medios Digitales de Comunicación", trim: 2, clases: "Clases 21 a 24", icono: "📢", descripcion: "Teoría de Shannon y Weaver, algoritmos y redes, ESI (mandatos estéticos), Ley Mica Ortega (Grooming) y Fake News." },
-    { id: 6, nombre: "Alfabetización Multimedia", trim: 3, clases: "Clases 26 a 30", icono: "🎬", descripcion: "Formatos comprimidos, lenguaje sonoro y podcasts, planos cinematográficos, Storyboard y montaje audiovisual." },
-    { id: 7, nombre: "Ciudadanía Digital e IA", trim: 3, clases: "Clases 31 a 34", icono: "⚖️", descripcion: "Huella digital, leyes argentinas (Habeas Data, delitos informáticos), Creative Commons y ética de la Inteligencia Artificial." },
-    { id: 8, nombre: "Proyecto Integrador Anual (ABP)", trim: 3, clases: "Clases 35 a 38", icono: "🚀", descripcion: "Producción comunitaria escolar, asesoramiento en taller, defensa oral y muestra comunitaria (RITE)." }
+    { id: 1, nombre: "Alfabetización informática-computacional", trim: 1, clases: "Clases 1 a 7", icono: "💻", descripcion: "Hardware, modelo Von Neumann, sistema binario, periféricos, unidades de medida y software libre (Huayra)." },
+    { id: 2, nombre: "Alfabetización en redes digitales de información", trim: 1, clases: "Clases 8 a 11", icono: "🌐", descripcion: "Topologías de red, medios guiados y fibra óptica, Cliente-Servidor, P2P, TCP/IP y Cloud Computing." },
+    { id: 3, nombre: "Alfabetización en manejo de la información", trim: 2, clases: "Clases 13 a 16", icono: "🔍", descripcion: "La World Wide Web, operadores booleanos, curaduría contra infoxicación, evolución Web 1.0 a 4.0 e inteligencia colectiva." },
+    { id: 4, nombre: "Alfabetización en manejo de componentes de imagen visual", trim: 2, clases: "Clases 17 a 20", icono: "🎨", descripcion: "Semiótica de Peirce, lectura denotativa y connotativa, marcas (logotipo, isotipo, isologo) y retórica publicitaria." },
+    { id: 5, nombre: "Alfabetización en medios digitales de comunicación y colaboración", trim: 2, clases: "Clases 21 a 25", icono: "📢", descripcion: "Teoría de Shannon y Weaver, algoritmos y redes, ESI (mandatos estéticos), Ley Mica Ortega (Grooming) y verificación de información." },
+    { id: 6, nombre: "Alfabetización multimedia", trim: 3, clases: "Clases 26 a 30", icono: "🎬", descripcion: "Formatos comprimidos, lenguaje sonoro y podcasts, planos cinematográficos, Storyboard y montaje audiovisual." },
+    { id: 7, nombre: "Alfabetización en ciudadanía digital", trim: 3, clases: "Clases 31 a 34", icono: "⚖️", descripcion: "Huella digital, leyes argentinas (Habeas Data, delitos informáticos), Creative Commons y análisis crítico de la IA como complemento actual." }
   ],
 
   clases: [

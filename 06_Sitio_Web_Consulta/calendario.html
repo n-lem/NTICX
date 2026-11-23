@@ -7,10 +7,11 @@
   <meta name="theme-color" content="#2563eb">
   <title>Calendario 2026 | NTICx 4° Año • EES N° 33</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('nticx-theme') || 'light');</script>
+  <script>document.documentElement.setAttribute('data-theme', location.protocol === 'file:' ? 'light' : (localStorage.getItem('nticx-theme') || 'light'));</script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div id="offline-status" role="status" aria-live="polite" hidden></div>
   <!-- HEADER UNIFICADO -->
   <header class="header-glass">
     <div class="header-container">
@@ -56,7 +57,7 @@
         <span class="current">Calendario Anual 2026</span>
       </nav>
       <h2>Calendario Escolar y Planificación Anual</h2>
-      <p>Organización temporal oficial de las 38 clases para el Ciclo Lectivo 2026 en la Provincia de Buenos Aires. Se destacan feriados nacionales, días no laborables y los períodos de receso escolar.</p>
+      <p>Fechas generales del calendario escolar 2026 en la Provincia de Buenos Aires, con feriados, días no laborables y receso. La secuencia de NTICx se organiza en tres trimestres y no se debe confundir con estos períodos cuatrimestrales del calendario escolar.</p>
     </section>
 
     <section class="calendar-info" aria-label="Hitos del ciclo lectivo 2026">
@@ -79,6 +80,7 @@
       <span class="legend-item period-start"></span> Inicio de cuatrimestre
       <span class="legend-item period-end"></span> Fin de cuatrimestre
     </p>
+    <p class="calendar-curriculum-note"><strong>Para NTICx:</strong> las clases y evaluaciones de la materia están agrupadas en tres trimestres (clases 1–12, 13–25 y 26–38). Las fechas de inicio y cierre que se muestran arriba corresponden al calendario escolar provincial.</p>
 
     <div id="calendar-grid" class="calendar-grid" aria-label="Calendario del año 2026"></div>
 
@@ -94,5 +96,6 @@
 
   <script src="theme.js"></script>
   <script src="calendario.js"></script>
+  <script src="../offline.js"></script>
 </body>
 </html>

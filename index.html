@@ -10,10 +10,11 @@
   <meta property="og:description" content="38 clases, fichas de actividades, manual, evaluaciones y calendario anual para NTICx.">
   <meta property="og:type" content="website">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('nticx-theme') || 'light');</script>
+  <script>document.documentElement.setAttribute('data-theme', location.protocol === 'file:' ? 'light' : (localStorage.getItem('nticx-theme') || 'light'));</script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div id="offline-status" class="offline-status" role="status" aria-live="polite" hidden></div>
 
   <!-- PORTAL DE ACCESO / BLOQUEO CON CONTRASEÑA -->
   <div id="auth-gate" class="auth-gate">
@@ -33,7 +34,7 @@
       </form>
 
       <div class="auth-hint">
-        💡 Si sos estudiante de 4° año y no tenés la clave, solicitala en clase.
+        💡 La clave es solo una pantalla de entrada: los materiales de este sitio público no están protegidos como contenido privado.
       </div>
     </div>
   </div>
@@ -94,7 +95,7 @@
       <span class="hero-tag">CICLO LECTIVO 2026 • DGCyE PROVINCIA DE BUENOS AIRES</span>
       <h2 class="hero-title">Nuevas Tecnologías de la Información y la Conectividad</h2>
       <p class="hero-subtitle">
-        Programa Curricular Oficial de <strong>38 Clases</strong> con <strong>Doble Vía Pedagógica</strong>: Modalidad Desenchufada (*Unplugged*) garantizada para el aula sin conectividad y Modalidad Digital situada.
+        Recorrido anual de <strong>38 clases</strong> alineado al Diseño Curricular DGCyE de <strong>siete módulos</strong>, con <strong>Doble Vía Pedagógica</strong>: actividades desenchufadas garantizadas y alternativas digitales situadas.
       </p>
 
       <div class="hero-meta-pills">
@@ -215,6 +216,24 @@
 
     <!-- TAB 3: MANUAL TEÓRICO DEL ESTUDIANTE -->
     <section id="tab-manual" class="tab-content" role="tabpanel">
+      <section class="curriculum-map" aria-labelledby="curriculum-map-title">
+        <h2 id="curriculum-map-title">Los siete módulos del Diseño Curricular DGCyE</h2>
+        <p>La Alfabetización Digital-Informacional articula dimensiones tecnológicas, comunicativas y sociales con una mirada crítica. El proyecto integrador funciona como cierre que recupera estos módulos; no es un octavo módulo curricular.</p>
+        <ol class="curriculum-module-list">
+          <li>Informática-computacional</li>
+          <li>Redes digitales de información</li>
+          <li>Manejo de la información</li>
+          <li>Componentes de imagen visual</li>
+          <li>Medios digitales de comunicación y colaboración</li>
+          <li>Multimedia</li>
+          <li>Ciudadanía digital</li>
+        </ol>
+        <div class="curriculum-extension">
+          <h3>Actualizaciones complementarias, no excluyentes</h3>
+          <p>Se pueden integrar, sin reemplazar los saberes curriculares: verificación de contenidos sintéticos y deepfakes; privacidad, huella y seguridad frente a engaños digitales; sesgos y límites de la IA generativa; accesibilidad (subtítulos, texto alternativo y contraste) y bienestar en entornos digitales.</p>
+          <p><strong>También sin Internet:</strong> análisis con capturas y fuentes impresas, simulación en papel de recomendaciones algorítmicas y listas de cotejo para revisar privacidad y accesibilidad.</p>
+        </div>
+      </section>
       <div class="manual-grid">
         <aside class="manual-sidebar">
           <div class="manual-nav-title">Módulos del Manual</div>
@@ -310,7 +329,7 @@
       <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 24px; margin-bottom: 24px; box-shadow: var(--shadow-sm);">
         <h2 style="color: var(--primary); margin-bottom: 6px;">🗓️ Calendario Escolar y Planificación Anual 2026</h2>
         <p style="color: var(--text-muted); line-height: 1.6;">
-          Organización temporal oficial de las 38 clases para el Ciclo Lectivo 2026 en la Provincia de Buenos Aires (DGCyE). Se destacan feriados nacionales, días no laborables y los períodos de receso escolar.
+          Fechas generales del calendario escolar 2026 en la Provincia de Buenos Aires (DGCyE), con feriados, días no laborables y receso. La secuencia de NTICx se organiza en tres trimestres y no se debe confundir con estos períodos cuatrimestrales del calendario escolar.
         </p>
       </div>
 
@@ -334,6 +353,7 @@
         <span class="legend-item period-start"></span> Inicio de cuatrimestre 
         <span class="legend-item period-end"></span> Fin de cuatrimestre
       </p>
+      <p class="calendar-curriculum-note"><strong>Para NTICx:</strong> las clases y evaluaciones de la materia están agrupadas en tres trimestres (clases 1–12, 13–25 y 26–38). Las fechas de inicio y cierre que se muestran arriba corresponden al calendario escolar provincial.</p>
 
       <div id="calendar-grid" class="calendar-grid" aria-label="Calendario del año 2026">
         <!-- Renderizado dinámico vía app.js -->
@@ -396,7 +416,7 @@
           <a class="card-item-modern" href="Diseño_Curricular/tic_4_final_web.pdf" target="_blank" rel="noopener noreferrer">
             <div class="card-item-header">
               <span class="badge-num-pill doc">DGCyE PBA</span>
-              <span class="card-item-module">Resolución Oficial</span>
+              <span class="card-item-module">Diseño Curricular oficial</span>
             </div>
             <h3 class="card-item-title">Diseño Curricular para ES4</h3>
             <p class="card-item-desc">Marco curricular oficial de la materia NTICx expedido por la Provincia de Buenos Aires (PDF descargable).</p>
@@ -453,5 +473,6 @@
   <script src="data.js"></script>
   <script src="theme.js"></script>
   <script src="app.js"></script>
+  <script src="offline.js"></script>
 </body>
 </html>

@@ -62,6 +62,36 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+#offline-status {
+  padding: 8px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-main);
+}
+
+#offline-status[data-state="ready"] {
+  border-bottom-color: var(--success);
+}
+
+#offline-status[data-state="offline"],
+#offline-status[data-state="pending"] {
+  border-bottom-color: var(--warning);
+}
+
+#offline-status[data-state="warning"] {
+  border-bottom-color: var(--danger);
+}
+
+.calendar-curriculum-note {
+  margin: 12px 0 20px;
+  padding: 12px 16px;
+  border-left: 4px solid var(--primary);
+  background: var(--bg-card-alt);
+  color: var(--text-muted);
+}
+
 /* NAVBAR & HEADER UNIFICADO */
 .header-glass {
   position: sticky;
@@ -1820,4 +1850,3 @@ body {
   border-top: 1px solid var(--border-color);
   padding-top: 14px;
 }
-

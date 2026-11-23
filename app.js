@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentSearch = "";
   let currentViewMode = "both"; // 'both', 'unplugged', 'digital'
   let currentManualModule = 1;
+  const isPortableCopy = location.protocol === "file:";
 
   // Elementos DOM de clases
   const classesContainer = document.getElementById("classes-container");
@@ -85,7 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   // 1. AUTENTICACIÓN Y SEGURIDAD
-  if (sessionStorage.getItem("nticx_auth_token") === AUTH_HASH) {
+  if (isPortableCopy) {
+    if (authGate) authGate.classList.add("unlocked");
+  } else if (sessionStorage.getItem("nticx_auth_token") === AUTH_HASH) {
     if (authGate) authGate.classList.add("unlocked");
   } else {
     if (authPasswordInput) setTimeout(() => authPasswordInput.focus(), 150);
@@ -132,6 +135,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (lockSessionBtn) {
     lockSessionBtn.addEventListener("click", () => {
+      if (isPortableCopy) {
+        if (authErrorMsg) authErrorMsg.textContent = "La copia USB es de acceso local y no ofrece protección de privacidad.";
+        return;
+      }
       sessionStorage.removeItem("nticx_auth_token");
       if (authGate) authGate.classList.remove("unlocked");
       if (authPasswordInput) {
@@ -492,8 +499,9 @@ document.addEventListener("DOMContentLoaded", () => {
       <h3>Contenidos Principales y Clases Asociadas</h3>
       <div class="resource-cards-grid" style="margin-top: 16px;">
         ${NTICX_DATA.clases
-          .filter(c => c.trimestre === modulo.trim && (modId === 1 ? c.numero <= 7 : modId === 2 ? (c.numero >= 8 && c.numero <= 11) : true))
-          .slice(0, 4)
+          .filter(c => modId === 1
+            ? c.numero <= 7
+            : c.modulo === `Módulo ${modId}`)
           .map(c => `
             <div class="card-item-modern">
               <span class="badge-num-pill t${c.trimestre}">Clase ${c.numero}</span>

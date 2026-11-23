@@ -190,7 +190,7 @@ function inicializarSelectorFuente() {
     if (!viewer) return;
     viewer.classList.remove("font-size-sm", "font-size-md", "font-size-lg", "font-size-xl");
     viewer.classList.add(`font-size-${tam}`);
-    localStorage.setItem(STORAGE_KEY, tam);
+    if (location.protocol !== "file:") localStorage.setItem(STORAGE_KEY, tam);
 
     Object.keys(botones).forEach(k => {
       if (botones[k]) botones[k].classList.toggle("active", k === tam);
@@ -203,12 +203,28 @@ function inicializarSelectorFuente() {
     }
   });
 
-  const savedSize = localStorage.getItem(STORAGE_KEY) || "md";
+  const savedSize = location.protocol === "file:" ? "md" : localStorage.getItem(STORAGE_KEY) || "md";
   cambiarFuente(savedSize);
 }
 
+function cargarPaqueteOffline() {
+  if (window.NTICX_OFFLINE_DOCUMENTS) return Promise.resolve();
+
+  return new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = "offline-documents.js";
+    script.onload = resolve;
+    script.onerror = () => reject(new Error("No se pudo cargar el paquete de materiales USB."));
+    document.head.appendChild(script);
+  });
+}
+
 async function cargarDocumento() {
-  if (!/^[\w./-]+\.md$/.test(archivo) || archivo.includes("..")) {
+  const pathSegments = archivo.split("/");
+  const validPath = pathSegments.length >= 2 &&
+    pathSegments.every(segment => /^[\p{L}\p{N}_-]+$/u.test(segment.replace(/\.md$/, ""))) &&
+    archivo.endsWith(".md");
+  if (!validPath) {
     salida.innerHTML = `
       <div style="text-align:center; padding: 40px 20px;">
         <h2>Documento no disponible</h2>
@@ -220,13 +236,16 @@ async function cargarDocumento() {
   }
 
   try {
-    // Intentar carga directa desde la raíz, con fallback si es necesario
-    let respuesta = await fetch(encodeURI(archivo));
-    if (!respuesta.ok) {
-      respuesta = await fetch(`../${encodeURI(archivo)}`);
+    let markdown = window.NTICX_OFFLINE_DOCUMENTS?.[archivo];
+    if (!markdown && location.protocol === "file:") {
+      await cargarPaqueteOffline();
+      markdown = window.NTICX_OFFLINE_DOCUMENTS?.[archivo];
     }
-    if (!respuesta.ok) throw new Error("No se pudo cargar el archivo");
-    let markdown = await respuesta.text();
+    if (!markdown) {
+      const respuesta = await fetch(encodeURI(archivo));
+      if (!respuesta.ok) throw new Error(`No se pudo cargar el archivo (${respuesta.status}).`);
+      markdown = await respuesta.text();
+    }
 
     if (vista === "estudiantes" && archivo.endsWith("Evaluacion_Trimestral_1.md")) {
       markdown = markdown.split(/^# GUÍA DE CORRECCIÓN Y CRITERIOS PARA EL DOCENTE/m)[0];
@@ -265,7 +284,7 @@ async function cargarDocumento() {
     salida.innerHTML = `
       <div style="text-align:center; padding: 40px 20px;">
         <h2>Error al cargar el documento</h2>
-        <p style="color:var(--text-muted); margin: 12px 0 20px;">Ocurrió un problema al leer el archivo en el servidor.</p>
+        <p style="color:var(--text-muted); margin: 12px 0 20px;">${escapar(err.message)} Si abriste el sitio desde un pendrive, verificá que esté incluido <code>offline-documents.js</code>.</p>
         <a href="./" class="btn-icon">← Volver a la plataforma</a>
       </div>
     `;

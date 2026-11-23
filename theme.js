@@ -4,11 +4,12 @@
   const THEME_KEY = "nticx-theme";
   const AUTH_KEY = "nticx_auth_token";
   const AUTH_HASH = "0bcae3312f35706863a35699527d76706ad4223ee1905b188233f1d9a8e372fc";
+  const isPortableCopy = window.location.protocol === "file:";
 
   // Verificación de autenticación para visor de documentos
   const path = window.location.pathname.toLowerCase();
   const isDocumento = path.includes("documento.html");
-  const isAuth = sessionStorage.getItem(AUTH_KEY) === AUTH_HASH;
+  const isAuth = isPortableCopy || sessionStorage.getItem(AUTH_KEY) === AUTH_HASH;
 
   if (isDocumento && !isAuth) {
     window.location.replace("index.html");
@@ -17,7 +18,7 @@
 
   function aplicarTema(theme) {
     document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem(THEME_KEY, theme);
+    if (!isPortableCopy) localStorage.setItem(THEME_KEY, theme);
     const buttons = document.querySelectorAll("#theme-toggle-btn, .theme-toggle-btn");
     buttons.forEach(btn => {
       const dark = theme === "dark";
@@ -30,7 +31,7 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     // 1. Inicializar tema
-    const savedTheme = localStorage.getItem(THEME_KEY) || "light";
+    const savedTheme = isPortableCopy ? "light" : localStorage.getItem(THEME_KEY) || "light";
     aplicarTema(savedTheme);
 
     const buttons = document.querySelectorAll("#theme-toggle-btn, .theme-toggle-btn");
@@ -46,7 +47,7 @@
     lockButtons.forEach(btn => {
       btn.addEventListener("click", (e) => {
         e.preventDefault();
-        sessionStorage.removeItem(AUTH_KEY);
+        if (!isPortableCopy) sessionStorage.removeItem(AUTH_KEY);
         if (window.location.pathname.includes("documento.html")) {
           window.location.href = "index.html";
         } else {

@@ -3,7 +3,6 @@
 **Docente:** Nahuel Lemos  
 **Distrito:** José C. Paz | Región 9 | Dirección General de Cultura y Educación (DGCyE PBA)  
 **Sitio Web en Vivo (GitHub Pages):** [https://n-lem.github.io/NTICX/](https://n-lem.github.io/NTICX/)  
-**Contraseña de Acceso a la Plataforma:** `nticx2026`
 
 ---
 
@@ -21,8 +20,12 @@ El proyecto está diseñado bajo el enfoque de **Alfabetización Digital-Informa
 
 ```
 NTICX/
-├── 📄 index.html                                        # Puerta de entrada y redirección a la plataforma web
+├── 📄 index.html                                        # Plataforma web principal
 ├── 📄 README.md                                          # Presentación general y documentación del proyecto
+├── 📄 offline-documents.js                               # Documentos integrados para lectura directa desde USB
+├── 📄 offline-manifest.js                                 # Recursos incluidos en el caché offline del navegador
+├── 📄 service-worker.js                                   # Preparación del modo offline tras una visita con conexión
+├── 📁 scripts/                                            # Herramientas para regenerar el paquete offline
 ├── 📁 00_Planificacion_Original/                        # Respaldo histórico del plan original
 │   └── 📄 Planificación NTICX 4A (1).pdf
 ├── 📁 01_Planificacion_y_Cronograma/                     # Plan curricular DGCyE y cronograma maestro
@@ -44,7 +47,16 @@ NTICX/
 │   ├── 📄 Evaluacion_Trimestral_1.md                    # Examen escrito formal (Tema 1, Tema 2 y respuestas)
 │   ├── 📄 Trabajo_Practico_Evaluativo_2.md              # Fanzine / Revista Mural (16 de Septiembre y ESI)
 │   └── 📄 Proyecto_Integrador_Anual_3.md                # Pautas ABP, rúbrica anual y actas RITE
-├── 📁 06_Sitio_Web_Consulta/                            # Plataforma interactiva Offline-First con contraseña
+├── 📁 Bibliografía/                                     # Repositorio de recursos y catálogo internacional
+│   ├── 📄 FUENTES_Y_ENLACES_GENERALES.md                # Índice maestro de fuentes y marcos curriculares comparados
+│   ├── 📁 01_Modulo_1_Alfabetizacion_Computacional/     # Recursos didácticos y actividades Módulo 1
+│   ├── 📁 02_Modulo_2_Redes_Digitales/                  # Recursos didácticos y simulaciones Módulo 2
+│   ├── 📁 03_Modulo_3_Manejo_Informacion/               # Recursos didácticos y método Gavilán Módulo 3
+│   ├── 📁 04_Modulo_4_Imagen_Visual/                    # Recursos didácticos y semiótica visual Módulo 4
+│   ├── 📁 05_Modulo_5_Medios_Comunicacion_y_ESI/        # Recursos didácticos, radio escolar y ESI Módulo 5
+│   ├── 📁 06_Modulo_6_Multimedia/                       # Recursos didácticos, audio y guion audiovisual Módulo 6
+│   └── 📁 07_Modulo_7_Ciudadania_Digital_e_IA/          # Recursos didácticos, ciberseguridad e IA Módulo 7
+├── 📁 06_Sitio_Web_Consulta/                            # Páginas auxiliares; su inicio redirige a la plataforma principal
 │   ├── 🌐 index.html
 │   ├── 🎨 styles.css
 │   ├── 📊 data.js
@@ -58,11 +70,26 @@ NTICX/
 ## 🌐 Plataforma Web de Consulta (GitHub Pages)
 
 La plataforma web fue construida con tecnologías web estándar (HTML5, Vanilla CSS y JavaScript puro) sin dependencias externas:
-* **Seguridad:** Portal de acceso protegido por contraseña (`nticx2026`).
+* **Acceso:** La pantalla de contraseña es solo una barrera de navegación; el repositorio y sus materiales son públicos y no debe usarse para proteger información privada.
 * **Conmutador de Doble Vía:** Selector para alternar en vivo entre *"Ambas Vías"*, *"Solo Desenchufada"* o *"Solo Digital"*.
 * **Buscador y Filtros:** Búsqueda en tiempo real de clases, temas, efemérides y términos de glosario.
-* **100% Offline-First:** Funciona tanto online en GitHub Pages como localmente desde un pendrive o netbook sin conexión.
+* **Modo offline en el navegador:** Al abrir el sitio con conexión, se guarda la aplicación, las fichas y los documentos; luego se puede continuar sin Internet en el mismo navegador y dispositivo.
+* **Copia USB directa:** Copiá la carpeta completa del repositorio y abrí `index.html` con doble clic. El sitio integra los documentos para lectura local; no requiere servidor, instalación ni conexión. Los enlaces a recursos externos sí necesitan Internet.
 * **Estilos de Impresión:** Optimizada para imprimir fichas limpias listas para fotocopias en blanco y negro.
+
+### Actualizar el paquete offline
+
+Cuando se agreguen o editen documentos Markdown, regenerá los archivos de consulta offline desde la raíz del repositorio:
+
+```powershell
+python scripts/build_offline_docs.py
+```
+
+La verificación del paquete se puede ejecutar con:
+
+```powershell
+python scripts/build_offline_docs.py --check
+```
 
 ---
 

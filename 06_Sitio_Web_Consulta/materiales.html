@@ -7,10 +7,11 @@
   <meta name="theme-color" content="#2563eb">
   <title>Materiales de Consulta | NTICx 4° Año • EES N° 33</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('nticx-theme') || 'light');</script>
+  <script>document.documentElement.setAttribute('data-theme', location.protocol === 'file:' ? 'light' : (localStorage.getItem('nticx-theme') || 'light'));</script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div id="offline-status" role="status" aria-live="polite" hidden></div>
   <!-- HEADER UNIFICADO -->
   <header class="header-glass">
     <div class="header-container">
@@ -266,5 +267,6 @@
   <script src="theme.js"></script>
   <script src="data.js"></script>
   <script src="materiales.js"></script>
+  <script src="../offline.js"></script>
 </body>
 </html>
