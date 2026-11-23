@@ -231,6 +231,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const showUnplugged = currentViewMode === "both" || currentViewMode === "unplugged";
       const showDigital = currentViewMode === "both" || currentViewMode === "digital";
       const fichaPath = fichasPaths[clase.numero - 1] || "";
+    const modId = parseInt(clase.modulo.replace(/\D/g, "")) || 1;
+    const moduloData = NTICX_DATA.modulos.find(m => m.id === modId);
+    const recursosPath = moduloData ? moduloData.recursosPath : "";
 
       card.innerHTML = `
         <div class="class-header">
@@ -483,9 +486,16 @@ document.addEventListener("DOMContentLoaded", () => {
     manualViewerContainer.innerHTML = `
       <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; border-bottom: 2px solid var(--border-color); padding-bottom: 12px; flex-wrap: wrap; gap: 8px;">
         <span class="eval-card-badge">${modulo.trim}° TRIMESTRE • ${modulo.clases}</span>
-        <a href="documento.html?archivo=03_Guia_Estudiantes/Manual_Estudiante_NTICX.md" class="btn-detail" style="text-decoration:none;">
-          📖 Ver Manual Completo Imprimible →
-        </a>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <a href="documento.html?archivo=03_Guia_Estudiantes/Manual_Estudiante_NTICX.md" class="btn-detail" style="text-decoration:none;">
+            📖 Manual Imprimible →
+          </a>
+          ${modulo.recursosPath ? `
+            <a href="documento.html?archivo=${encodeURIComponent(modulo.recursosPath)}" class="btn-detail" style="text-decoration:none; background: var(--accent); color: white;">
+              📚 Bibliografía y REA →
+            </a>
+          ` : ''}
+        </div>
       </div>
 
       <h2>${modulo.icono} Módulo ${modulo.id}: ${modulo.nombre}</h2>
@@ -493,7 +503,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <div class="manual-callout">
         <strong>💡 Orientación Pedagógica del Módulo:</strong>
-        <p style="margin-top: 6px;">Este módulo aborda los saberes prioritarios según el Diseño Curricular bonaerense y el libro de texto oficial de Ana María Andrada (Ed. Maipué).</p>
+        <p style="margin-top: 6px;">Este módulo aborda los saberes prioritarios según el Diseño Curricular bonaerense y el libro de texto oficial de Ana María Andrada (Ed. Maipué), articulando con el corpus internacional de REA abiertos (CS Unplugged, Teach Computing, EDIA, Ceibal, UNESCO y Common Sense).</p>
+      </div>
+
+      <div style="margin: 16px 0; display: flex; gap: 12px; flex-wrap: wrap;">
+        ${modulo.recursosPath ? `
+          <a href="documento.html?archivo=${encodeURIComponent(modulo.recursosPath)}" style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 14px; background: var(--bg-card-alt); border: 1px solid var(--border-color); border-radius: var(--radius-sm); font-size: 0.9rem; text-decoration: none; color: var(--primary); font-weight: 600;">
+            <span>🌐</span> Ver Fuentes y Actividades Duales (Offline/Online) del Módulo ${modulo.id} →
+          </a>
+        ` : ''}
       </div>
 
       <h3>Contenidos Principales y Clases Asociadas</h3>
@@ -558,6 +576,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!clase) return;
 
     const fichaPath = fichasPaths[clase.numero - 1] || "";
+    const modId = parseInt(clase.modulo.replace(/\D/g, "")) || 1;
+    const moduloData = NTICX_DATA.modulos.find(m => m.id === modId);
+    const recursosPath = moduloData ? moduloData.recursosPath : "";
 
     modalBody.innerHTML = `
       <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 12px; flex-wrap: wrap;">
@@ -593,7 +614,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <div style="border-top: 1px solid var(--border-color); padding-top: 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
         <span style="font-size: 0.85rem; color: var(--text-muted);">📦 <strong>Materiales:</strong> ${clase.materiales}</span>
-        <div style="display: flex; gap: 8px;">
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          ${recursosPath ? `<a href="documento.html?archivo=${encodeURIComponent(recursosPath)}" class="btn-detail" style="text-decoration:none; background: var(--bg-card-alt); color: var(--primary); border: 1px solid var(--border-color);">📚 Recursos y REA Módulo ${modId}</a>` : ''}
           ${fichaPath ? `<a href="documento.html?archivo=${encodeURIComponent(fichaPath)}" class="btn-detail" style="text-decoration:none;">📄 Abrir Ficha Imprimible →</a>` : ''}
           <button class="btn-detail" type="button" onclick="window.print()">🖨️ Imprimir</button>
         </div>
