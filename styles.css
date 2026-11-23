@@ -204,6 +204,12 @@ body {
   border: 1px solid var(--border-color);
 }
 
+.header-nav.main-nav {
+  min-width: 0;
+  overflow-x: auto;
+  justify-content: flex-start;
+}
+
 .header-nav .nav-link,
 .header-nav .nav-tab-link {
   display: inline-flex;

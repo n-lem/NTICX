@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Actividades interactivas para los siete módulos de NTICx.">
+  <meta name="theme-color" content="#2563eb">
+  <title>Actividades interactivas | NTICx</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.setAttribute('data-theme', location.protocol === 'file:' ? 'light' : (localStorage.getItem('nticx-theme') || 'light'));</script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="actividades.css">
+</head>
+<body>
+  <div id="offline-status" role="status" aria-live="polite" hidden></div>
+  <header class="header-glass">
+    <div class="header-container">
+      <a href="index.html" class="brand" aria-label="Volver a la plataforma NTICx">
+        <div class="brand-badge">NTICx</div>
+        <div class="brand-info">
+          <h1>EES N° 33 “16 de septiembre”</h1>
+          <p>4° 1° Secundaria • Ciclo Lectivo 2026</p>
+        </div>
+      </a>
+      <nav class="header-nav" aria-label="Navegación principal">
+        <a href="index.html" class="nav-link">← Inicio</a>
+        <a href="index.html#tab-cuadernillo" class="nav-link">📝 Fichas</a>
+        <a href="index.html#tab-manual" class="nav-link">📖 Manual</a>
+      </nav>
+      <div class="header-controls">
+        <button id="theme-toggle-btn" class="btn-icon" type="button" aria-pressed="false" title="Cambiar tema">
+          <span class="theme-icon">🌙</span> <span class="control-text">Modo Oscuro</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-container activities-page">
+    <a class="back-btn" href="index.html">← Volver a la plataforma</a>
+    <header class="activities-intro">
+      <p class="activities-label">ACTIVIDADES INTERACTIVAS</p>
+      <h2>Practicá por módulo</h2>
+      <p>Explorá, practicá y repasá a tu ritmo. No necesitás conexión ni registrarte.</p>
+      <p>Elegí un módulo y después una actividad para abrirla.</p>
+      <p>Las respuestas de los cuestionarios se guardan en este dispositivo y navegador, si está permitido. No ingreses datos personales.</p>
+    </header>
+    <nav class="activity-jump module-selector" id="elegir-modulo" aria-label="Elegir módulo">
+      <a href="#modulo-1">Módulo 1: Informática</a>
+      <a href="#modulo-2">Módulo 2: Redes digitales</a>
+      <a href="#modulo-3">Módulo 3: Manejo de la información</a>
+      <a href="#modulo-4">Módulo 4: Imagen visual</a>
+      <a href="#modulo-5">Módulo 5: Comunicación</a>
+      <a href="#modulo-6">Módulo 6: Multimedia</a>
+      <a href="#modulo-7">Módulo 7: Ciudadanía digital</a>
+    </nav>
+    <div class="module-panel">
+    <header class="activities-intro module-heading" id="modulo-1">
+      <p class="activities-label">MÓDULO 1</p>
+      <h2>Alfabetización informática-computacional</h2>
+      <a href="documento.html?archivo=03_Guia_Estudiantes%2FModulos_Individuales%2F01_Modulo_1_Alfabetizacion_Computacional.md">📖 Leer el módulo 1 del manual</a>
+    </header>
+    <a class="back-to-modules" href="#elegir-modulo">↑ Elegir otro módulo</a>
+    <nav class="activity-jump" aria-label="Actividades del módulo 1">
+      <a href="#binario">Binario y ASCII</a>
+      <a href="#arquitectura">Arquitectura</a>
+      <a href="#unidades">Unidades</a>
+      <a href="#armado-pc">Armá una computadora</a>
+      <a href="#datos-informacion">Datos e información</a>
+      <a href="#cuestionario">Cuestionario</a>
+    </nav>
+
+    <section class="activity-card" id="binario" aria-labelledby="binario-title">
+      <h2 id="binario-title">🔢 Conversor binario y ASCII</h2>
+      <p>Convertí números y descubrí el valor de cada posición. <a href="documento.html?archivo=04_Cuadernillo_Actividades%2F1_Trimestre%2FFicha_06_El_Sistema_Binario_y_el_C_digo_ASCI.md">Ficha 6</a></p>
+      <form id="binary-form" class="activity-form" novalidate>
+        <label for="binary-direction">Conversión</label>
+        <select id="binary-direction">
+          <option value="decimal">Decimal a binario</option>
+          <option value="binary">Binario a decimal</option>
+        </select>
+        <label for="binary-input">Número</label>
+        <input id="binary-input" type="text" inputmode="numeric" autocomplete="off" placeholder="Ejemplo: 22" required>
+        <p class="activity-hint">Usá números enteros entre 0 y 65535 o hasta 16 dígitos binarios.</p>
+        <button class="btn-detail activity-button" type="submit">Convertir</button>
+      </form>
+      <div id="binary-result" class="activity-result" role="status" aria-live="polite"></div>
+      <form id="ascii-form" class="activity-form" novalidate>
+        <label for="ascii-input">Descifrar mensaje ASCII</label>
+        <p class="activity-hint">Ingresá bytes de 8 bits separados por espacios. Se admiten caracteres ASCII imprimibles (32 a 126).</p>
+        <input id="ascii-input" type="text" autocomplete="off" placeholder="01000011 01000001 01010011 01000001" required>
+        <button class="btn-detail activity-button" type="submit">Descifrar</button>
+      </form>
+      <div id="ascii-result" class="activity-result" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="activity-card" id="arquitectura" aria-labelledby="arquitectura-title">
+      <h2 id="arquitectura-title">🖥️ Explorador de Von Neumann</h2>
+      <p>Seleccioná un componente del esquema para conocer su función. <a href="documento.html?archivo=04_Cuadernillo_Actividades%2F1_Trimestre%2FFicha_04_Arquitectura_de_la_Computadora_Von_.md">Ficha 4</a></p>
+      <div class="architecture" aria-label="Esquema interactivo de componentes">
+        <button type="button" data-component="entrada">Entrada</button>
+        <span class="architecture-arrow" aria-hidden="true">→</span>
+        <div class="processor">
+          <button type="button" data-component="cpu">CPU</button>
+          <div class="processor-parts">
+            <button type="button" data-component="uc">Unidad de control</button>
+            <button type="button" data-component="alu">ALU</button>
+          </div>
+        </div>
+        <span class="architecture-arrow" aria-hidden="true">→</span>
+        <button type="button" data-component="salida">Salida</button>
+        <div class="memory-connection" aria-hidden="true">↕</div>
+        <div class="architecture-memory">
+          <button type="button" data-component="ram">RAM</button>
+          <button type="button" data-component="rom">ROM</button>
+          <button type="button" data-component="almacenamiento">Almacenamiento</button>
+          <button type="button" data-component="buses">Buses</button>
+          <button type="button" data-component="puertos">Puertos</button>
+        </div>
+      </div>
+      <p class="activity-hint">Los buses conectan los componentes y transportan datos, direcciones y señales de control.</p>
+      <div id="component-result" class="activity-result" role="status" aria-live="polite">Elegí un componente para comenzar.</div>
+    </section>
+
+    <section class="activity-card" id="unidades" aria-labelledby="unidades-title">
+      <h2 id="unidades-title">📊 Calculadora de almacenamiento</h2>
+      <p>Según la ficha: 1 byte = 8 bits y cada unidad superior equivale a 1024 de la anterior. En otros contextos KB, MB, GB y TB también pueden usar 1000. <a href="documento.html?archivo=04_Cuadernillo_Actividades%2F1_Trimestre%2FFicha_05_Perif_ricos_y_Unidades_de_Medida.md">Ficha 5</a></p>
+      <form id="units-form" class="activity-form" novalidate>
+        <label for="units-value">Cantidad</label>
+        <input id="units-value" type="number" min="0" max="1000000000" step="any" placeholder="Ejemplo: 16" required>
+        <div class="unit-selects">
+          <div><label for="units-from">De</label><select id="units-from"></select></div>
+          <div><label for="units-to">A</label><select id="units-to"></select></div>
+        </div>
+        <button class="btn-detail activity-button" type="submit">Calcular</button>
+      </form>
+      <div id="units-result" class="activity-result" role="status" aria-live="polite"></div>
+      <form id="capacity-form" class="activity-form" novalidate>
+        <label for="capacity-answer">Desafío: ¿cuántas canciones de 4 MB caben en un pendrive de 16 GB teóricos?</label>
+        <input id="capacity-answer" type="number" min="0" step="1" placeholder="Cantidad de canciones" required>
+        <button class="btn-detail activity-button" type="submit">Comprobar</button>
+      </form>
+      <div id="capacity-result" class="activity-result" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="activity-card" id="armado-pc" aria-labelledby="armado-pc-title">
+      <h2 id="armado-pc-title">🧩 Armá una computadora</h2>
+      <p>Elegí componentes para una biblioteca que necesita navegar y editar documentos. El presupuesto ficticio es de 700 puntos. Las piezas y precios son ejemplos, no recomendaciones de compra.</p>
+      <form id="pc-form" class="activity-form">
+        <label for="pc-cpu">Procesador</label>
+        <select id="pc-cpu"><option value="basico">Básico, plataforma A — 150 puntos</option><option value="avanzado">Avanzado, plataforma B — 300 puntos</option></select>
+        <label for="pc-board">Placa madre</label>
+        <select id="pc-board"><option value="a">Plataforma A — 150 puntos</option><option value="b">Plataforma B — 200 puntos</option></select>
+        <label for="pc-ram">Memoria RAM</label>
+        <select id="pc-ram"><option value="4">4 GB — 80 puntos</option><option value="8">8 GB — 120 puntos</option><option value="16">16 GB — 200 puntos</option></select>
+        <label for="pc-storage">Almacenamiento</label>
+        <select id="pc-storage"><option value="128">SSD 128 GB — 80 puntos</option><option value="256">SSD 256 GB — 120 puntos</option><option value="512">SSD 512 GB — 200 puntos</option></select>
+        <button class="btn-detail activity-button" type="submit">Revisar equipo</button>
+      </form>
+      <p id="pc-result" class="activity-result" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="activity-card" id="datos-informacion" aria-labelledby="datos-title">
+      <h2 id="datos-title">📋 Datos e información</h2>
+      <p>Para cada ejemplo, elegí si se presenta como dato aislado o como información contextualizada. Un mismo dato puede convertirse en información al interpretarlo en un contexto.</p>
+      <form id="data-form" class="activity-form">
+        <label for="data-case">Ejemplo</label>
+        <select id="data-case"><option value="0">Ejemplo 1</option><option value="1">Ejemplo 2</option><option value="2">Ejemplo 3</option><option value="3">Ejemplo 4</option></select>
+        <p id="data-example" class="fact-evidence"></p>
+        <label for="data-answer">Clasificación</label>
+        <select id="data-answer"><option value="">Elegí una opción</option><option value="dato">Dato aislado</option><option value="informacion">Información contextualizada</option></select>
+        <button class="btn-detail activity-button" type="submit">Comprobar</button>
+      </form>
+      <p id="data-result" class="activity-result" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="activity-card" id="cuestionario" aria-labelledby="quiz-title">
+      <h2 id="quiz-title">📝 Autoevaluación del módulo 1</h2>
+      <p>Elegí una respuesta por pregunta. Podés cambiarla y recibirás una explicación. Esta práctica no tiene nota formal.</p>
+      <p id="storage-status" role="status" aria-live="polite"></p>
+      <form id="quiz-form">
+        <div id="quiz-questions"></div>
+        <p id="quiz-score" class="quiz-score" role="status" aria-live="polite"></p>
+        <button id="quiz-reset" class="btn-detail activity-button" type="button">Reiniciar cuestionario</button>
+      </form>
+    </section>
+    <a class="back-to-modules" href="#elegir-modulo">↑ Elegir otro módulo</a>
+    </div>
+
+    <div class="module-panel">
+    <header class="activities-intro module-heading" id="modulo-2">
+      <p class="activities-label">MÓDULO 2</p>
+      <h2>Alfabetización en redes digitales de información</h2>
+      <a href="documento.html?archivo=03_Guia_Estudiantes%2FModulos_Individuales%2F02_Modulo_2_Redes_Digitales.md">📖 Leer el módulo 2 del manual</a>
+    </header>
+    <a class="back-to-modules" href="#elegir-modulo">↑ Elegir otro módulo</a>
+    <nav class="activity-jump" aria-label="Actividades del módulo 2">
+      <a href="#topologias">Simulador de topologías</a>
+      <a href="#paquetes">Viaje de un mensaje</a>
+      <a href="#cuestionario-redes">Cuestionario del módulo 2</a>
+    </nav>
+
+    <section class="activity-card" id="topologias" aria-labelledby="topologias-title">
+      <h2 id="topologias-title">🌐 Simulador de topologías de red</h2>
+      <p>Elegí una topología, enviá un mensaje y experimentá cortando y reparando cables. <a href="documento.html?archivo=04_Cuadernillo_Actividades%2F1_Trimestre%2FFicha_09_Topolog_as_de_Red_y_Convivencia_Dig.md">Ficha 9</a></p>
+      <p class="activity-hint">Es un modelo simplificado de cuatro equipos. En bus, un corte de la troncal interrumpe el medio compartido; en anillo, el modelo supone que la circulación necesita el anillo completo.</p>
+      <div class="activity-form topology-controls">
+        <div>
+          <label for="topology-type">Topología</label>
+          <select id="topology-type">
+            <option value="bus">Bus</option>
+            <option value="ring">Anillo</option>
+            <option value="star">Estrella</option>
+            <option value="mesh">Malla</option>
+          </select>
+        </div>
+        <div>
+          <label for="topology-cable">Cable</label>
+          <select id="topology-cable"></select>
+        </div>
+        <button id="topology-toggle" class="btn-detail activity-button" type="button">Cortar cable</button>
+        <button id="topology-restore" class="btn-detail activity-button" type="button">Reparar todos los cables</button>
+      </div>
+      <div id="topology-diagram" class="topology-diagram" role="img" aria-label="Diagrama de la red"></div>
+      <p class="activity-hint">Línea continua: cable conectado; línea punteada: cable cortado; línea resaltada: recorrido del mensaje.</p>
+      <p id="topology-status" class="activity-result" role="status" aria-live="polite"></p>
+      <form id="topology-send" class="activity-form">
+        <div class="unit-selects">
+          <div><label for="topology-source">Origen</label><select id="topology-source"></select></div>
+          <div><label for="topology-destination">Destino</label><select id="topology-destination"></select></div>
+        </div>
+        <button class="btn-detail activity-button" type="submit">Enviar mensaje</button>
+      </form>
+      <p id="topology-result" class="activity-result" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="activity-card" id="paquetes" aria-labelledby="paquetes-title">
+      <h2 id="paquetes-title">📦 Viaje de un mensaje</h2>
+      <p>Escribí un mensaje ficticio. Este modelo simplificado lo divide en tres partes, las entrega fuera de orden y simula la pérdida y retransmisión de una parte. TCP transporta bytes, no necesariamente caracteres.</p>
+      <form id="packet-form" class="activity-form">
+        <label for="packet-message">Mensaje ficticio (de 3 a 30 caracteres)</label>
+        <input id="packet-message" type="text" maxlength="30" autocomplete="off" required>
+        <button class="btn-detail activity-button" type="submit">Enviar mensaje</button>
+      </form>
+      <div id="packet-result" class="activity-result" role="status" aria-live="polite">Todavía no se envió ningún mensaje.</div>
+      <button id="packet-retry" class="btn-detail activity-button" type="button" disabled>Retransmitir parte perdida</button>
+    </section>
+
+    <section class="activity-card" id="cuestionario-redes" aria-labelledby="quiz-redes-title">
+      <h2 id="quiz-redes-title">📝 Autoevaluación del módulo 2</h2>
+      <p>Elegí una respuesta por pregunta. Podés cambiarla y recibirás una explicación. Esta práctica no tiene nota formal.</p>
+      <p id="storage-status-redes" class="storage-status" role="status" aria-live="polite"></p>
+      <form id="quiz-form-redes">
+        <div id="quiz-questions-redes"></div>
+        <p id="quiz-score-redes" class="quiz-score" role="status" aria-live="polite"></p>
+        <button id="quiz-reset-redes" class="btn-detail activity-button" type="button">Reiniciar cuestionario</button>
+      </form>
+    </section>
+    <a class="back-to-modules" href="#elegir-modulo">↑ Elegir otro módulo</a>
+    </div>
+
+    <div class="module-panel">
+    <header class="activities-intro module-heading" id="modulo-3">
+      <p class="activities-label">MÓDULO 3</p>
+      <h2>Alfabetización en manejo de la información</h2>
+      <a href="documento.html?archivo=03_Guia_Estudiantes%2FModulos_Individuales%2F03_Modulo_3_Manejo_Informacion.md">📖 Leer el módulo 3 del manual</a>
+    </header>
+    <a class="back-to-modules" href="#elegir-modulo">↑ Elegir otro módulo</a>
+    <nav class="activity-jump" aria-label="Actividades del módulo 3">
+      <a href="#evolucion-web">Evolución de la Web</a>
+      <a href="#busqueda-booleana">Búsqueda booleana</a>
+      <a href="#editor-html">Editor HTML</a>
+      <a href="#cuestionario-informacion">Cuestionario del módulo 3</a>
+    </nav>
+
+    <section class="activity-card" id="evolucion-web" aria-labelledby="evolucion-web-title">
+      <h2 id="evolucion-web-title">🌍 Línea de tiempo de la Web</h2>
+      <p>Seleccioná una etapa o avanzá por la línea para explorar sus características y ejemplos. <a href="documento.html?archivo=04_Cuadernillo_Actividades%2F2_Trimestre%2FFicha_15_Evoluci_n_de_la_Web_De_la_1_0_a_la_.md">Ficha 15</a></p>
+      <p class="activity-hint">Las etapas son una guía para estudiar cambios: se superponen y las funciones de una etapa no desaparecen al comenzar otra.</p>
+      <div class="web-timeline" role="group" aria-label="Etapas de la evolución de la Web">
+        <button type="button" class="web-era" data-web-era="0" aria-pressed="true"><span>Web 1.0</span><small>Años 90</small></button>
+        <button type="button" class="web-era" data-web-era="1" aria-pressed="false"><span>Web 2.0</span><small>Desde los 2000</small></button>
+        <button type="button" class="web-era" data-web-era="2" aria-pressed="false"><span>Web 3.0</span><small>Web semántica</small></button>
+        <button type="button" class="web-era" data-web-era="3" aria-pressed="false"><span>Web 4.0</span><small>Tendencias actuales</small></button>
+      </div>
+      <div class="web-era-detail" id="web-era-detail" role="status" aria-live="polite">
+        <h3 id="web-era-title">Web 1.0: lectura</h3>
+        <p id="web-era-description">Predominan las páginas estáticas creadas por unas pocas personas; el público principalmente lee.</p>
+        <p><strong>Ejemplo:</strong> <span id="web-era-example">un sitio institucional de los años 90 con páginas informativas y enlaces.</span></p>
+      </div>
+      <div class="web-timeline-controls">
+        <button type="button" class="btn-detail activity-button" id="web-previous" disabled>← Etapa anterior</button>
+        <button type="button" class="btn-detail activity-button" id="web-next">Etapa siguiente →</button>
+      </div>
+    </section>
+
+    <section class="activity-card" id="busqueda-booleana" aria-labelledby="busqueda-title">
+      <h2 id="busqueda-title">🔎 Laboratorio de búsqueda</h2>
+      <p>Buscá dos términos en una pequeña colección ficticia. AND exige ambos; OR encuentra al menos uno. Se buscan fragmentos de texto sin distinguir mayúsculas ni tildes; no se consulta Internet.</p>
+      <form id="search-form" class="activity-form">
+        <label for="search-first">Primer término</label><input id="search-first" type="text" maxlength="30" placeholder="Ejemplo: agua" required>
+        <label for="search-operator">Operador</label><select id="search-operator"><option value="AND">AND: ambos términos</option><option value="OR">OR: al menos uno</option></select>
+        <label for="search-second">Segundo término</label><input id="search-second" type="text" maxlength="30" placeholder="Ejemplo: escuela" required>
+        <button class="btn-detail activity-button" type="submit">Buscar</button>
+      </form>
+      <div id="search-result" class="activity-result" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="activity-card" id="editor-html" aria-labelledby="editor-title">
+      <h2 id="editor-title">💻 Editor HTML</h2>
+      <p>Editá el ejemplo y actualizá la vista previa. Se muestran únicamente texto y etiquetas básicas de formato; se omiten atributos, enlaces, imágenes y código ejecutable.</p>
+      <form id="html-form" class="activity-form">
+        <label for="html-input">Código HTML de práctica</label>
+        <textarea id="html-input" rows="7" maxlength="5000" spellcheck="false">&lt;h2&gt;Mi proyecto&lt;/h2&gt;
+&lt;p&gt;Una idea para &lt;strong&gt;compartir&lt;/strong&gt; en clase.&lt;/p&gt;</textarea>
+        <button class="btn-detail activity-button" type="submit">Actualizar vista previa</button>
+      </form>
+      <h3>Vista previa</h3>
+      <div id="html-preview" class="mission-preview" aria-live="polite"></div>
+    </section>
+
+    <section class="activity-card" id="cuestionario-informacion" aria-labelledby="quiz-informacion-title">
+      <h2 id="quiz-informacion-title">📝 Autoevaluación del módulo 3</h2>
+      <p>Elegí una respuesta por pregunta. Podés cambiarla y recibirás una explicación. Esta práctica no tiene nota formal.</p>
+      <p id="storage-status-informacion" class="storage-status" role="status" aria-live="polite"></p>
+      <form id="quiz-form-informacion">
+        <div id="quiz-questions-informacion"></div>
+        <p id="quiz-score-informacion" class="quiz-score" role="status" aria-live="polite"></p>
+        <button id="quiz-reset-informacion" class="btn-detail activity-button" type="button">Reiniciar cuestionario</button>
+      </form>
+    </section>
+    <a class="back-to-modules" href="#elegir-modulo">↑ Elegir otro módulo</a>
+    </div>
+
+    <div class="module-panel">
+    <header class="activities-intro module-heading" id="modulo-4">
+      <p class="activities-label">MÓDULO 4</p>
+      <h2>Componentes de imagen visual</h2>
+      <a href="documento.html?archivo=03_Guia_Estudiantes%2FModulos_Individuales%2F04_Modulo_4_Imagen_Visual.md">📖 Leer el módulo 4 del manual</a>
+    </header>
+    <a class="back-to-modules" href="#elegir-modulo">↑ Elegir otro módulo</a>
+    <nav class="activity-jump" aria-label="Actividades del módulo 4">
+      <a href="#marcas">Clasificador de marcas</a>
+      <a href="#colores">Rueda de colores</a>
+      <a href="#diseno-visual">Diseñá una pieza visual</a>
+      <a href="#cuestionario-imagen">Cuestionario del módulo 4</a>
+    </nav>
+
+    <section class="activity-card" id="marcas" aria-labelledby="marcas-title">
+      <h2 id="marcas-title">🏷️ Clasificador de marcas</h2>
+      <p>Observá estas marcas ficticias creadas para practicar. Elegí la categoría que describe su composición. <a href="documento.html?archivo=04_Cuadernillo_Actividades%2F2_Trimestre%2FFicha_19_Identidad_Visual_Logotipo_Isotipo_e.md">Ficha 19</a></p>
+      <p id="brand-position" class="activity-hint">Marca 1 de 4</p>
+      <div class="brand-examples">
+        <figure data-brand="0">
+          <svg viewBox="0 0 300 120" role="img" aria-label="La palabra SOLAR escrita con letras, sin otro símbolo">
+            <text x="150" y="77" text-anchor="middle" fill="#1d4ed8" font-family="sans-serif" font-size="54" font-weight="700">SOLAR</text>
+          </svg>
+        </figure>
+        <figure data-brand="1" hidden>
+          <svg viewBox="0 0 300 120" role="img" aria-label="Símbolo de un sol, sin letras">
+            <circle cx="150" cy="60" r="26" fill="#d97706"/>
+            <path d="M150 12v13 M150 95v13 M102 60h13 M185 60h13 M116 26l9 9 M175 85l9 9 M184 26l-9 9 M125 85l-9 9" stroke="#d97706" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+        </figure>
+        <figure data-brand="2" hidden>
+          <svg viewBox="0 0 300 120" role="img" aria-label="Una hoja y, a su derecha, la palabra HUERTA separados">
+            <path d="M40 77 Q40 30 88 30 Q88 77 40 77 M42 75 L75 42" fill="#16a34a" stroke="#166534" stroke-width="4"/>
+            <text x="105" y="73" fill="#166534" font-family="sans-serif" font-size="31" font-weight="700">HUERTA</text>
+          </svg>
+        </figure>
+        <figure data-brand="3" hidden>
+          <svg viewBox="0 0 300 120" role="img" aria-label="Emblema con la palabra AULA recortada dentro de su forma">
+            <defs><mask id="brand-cutout"><rect width="300" height="120" fill="white"/><text x="150" y="72" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="700" fill="black">AULA</text></mask></defs>
+            <path d="M75 15 H225 L250 60 L225 105 H75 L50 60 Z" fill="#7c3aed" mask="url(#brand-cutout)"/>
+          </svg>
+        </figure>
+      </div>
+      <form id="brand-form" class="activity-form">
+        <fieldset class="brand-options">
+          <legend>¿Cómo se clasifica esta marca?</legend>
+          <label><input type="radio" name="brand-answer" value="logotipo"> Logotipo</label>
+          <label><input type="radio" name="brand-answer" value="isotipo"> Isotipo</label>
+          <label><input type="radio" name="brand-answer" value="imagotipo"> Imagotipo</label>
+          <label><input type="radio" name="brand-answer" value="isologo"> Isologo</label>
+        </fieldset>
+        <button class="btn-detail activity-button" type="submit">Comprobar</button>
+      </form>
+      <p id="brand-result" class="activity-result" role="status" aria-live="polite"></p>
+      <div class="activity-controls">
+        <button type="button" class="btn-detail activity-button" id="brand-previous" disabled>← Marca anterior</button>
+        <button type="button" class="btn-detail activity-button" id="brand-next">Marca siguiente →</button>
+      </div>
+    </section>
+
+    <section class="activity-card" id="colores" aria-labelledby="colores-title">
+      <h2 id="colores-title">🎨 Rueda de asociaciones del color</h2>
+      <p>Seleccioná un color para explorar asociaciones frecuentes en publicidad. No son reglas universales: cambian según la cultura, la persona y el contexto. <a href="documento.html?archivo=04_Cuadernillo_Actividades%2F2_Trimestre%2FFicha_20_Ret_rica_Publicitaria_y_Psicolog_a_.md">Ficha 20</a></p>
+      <div class="color-wheel" role="group" aria-label="Seleccionar un color">
+        <span class="color-wheel-center" aria-hidden="true">Elegí un color</span>
+        <button type="button" class="color-choice color-red" data-color="rojo" aria-pressed="false"><span></span>Rojo</button>
+        <button type="button" class="color-choice color-yellow" data-color="amarillo" aria-pressed="false"><span></span>Amarillo</button>
+        <button type="button" class="color-choice color-green" data-color="verde" aria-pressed="false"><span></span>Verde</button>
+        <button type="button" class="color-choice color-blue" data-color="azul" aria-pressed="false"><span></span>Azul</button>
+        <button type="button" class="color-choice color-black" data-color="negro" aria-pressed="false"><span></span>Negro</button>
+      </div>
+      <p id="color-result" class="activity-result" role="status" aria-live="polite">Elegí un color para comenzar.</p>
+    </section>
+
+    <section class="activity-card" id="diseno-visual" aria-labelledby="diseno-title">
+      <h2 id="diseno-title">🖼️ Diseñá una pieza visual</h2>
+      <p>Diseñá un aviso para invitar a la lectura. Probá las opciones y compará la legibilidad del texto con su fondo.</p>
+      <div class="activity-form">
+        <label for="design-background">Color de fondo</label><select id="design-background"><option value="#ffffff">Blanco</option><option value="#1e3a8a">Azul oscuro</option><option value="#facc15">Amarillo</option><option value="#111827">Gris oscuro</option></select>
+        <label for="design-text">Color del texto</label><select id="design-text"><option value="#111827">Gris oscuro</option><option value="#ffffff">Blanco</option><option value="#2563eb">Azul</option><option value="#facc15">Amarillo</option></select>
+        <label for="design-font">Tipografía</label><select id="design-font"><option value="sans-serif">Sin serifas</option><option value="serif">Con serifas</option></select>
+        <label for="design-align">Composición</label><select id="design-align"><option value="left">Alineada a la izquierda</option><option value="center">Centrada</option></select>
+      </div>
+      <div id="design-preview" class="mission-preview"><strong>Un libro, una aventura</strong><p>Acercate a la biblioteca y descubrí nuevas historias.</p></div>
+      <p id="design-result" class="activity-result" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="activity-card" id="cuestionario-imagen" aria-labelledby="quiz-imagen-title">
+      <h2 id="quiz-imagen-title">📝 Autoevaluación del módulo 4</h2>
+      <p>Elegí una respuesta por pregunta. Podés cambiarla y recibirás una explicación. Esta práctica no tiene nota formal.</p>
+      <p id="storage-status-imagen" class="storage-status" role="status" aria-live="polite"></p>
+      <form id="quiz-form-imagen">
+        <div id="quiz-questions-imagen"></div>
+        <p id="quiz-score-imagen" class="quiz-score" role="status" aria-live="polite"></p>
+        <button id="quiz-reset-imagen" class="btn-detail activity-button" type="button">Reiniciar cuestionario</button>
+      </form>
+    </section>
+    <a class="back-to-modules" href="#elegir-modulo">↑ Elegir otro módulo</a>
+    </div>
+
+    <div class="module-panel">
+    <header class="activities-intro module-heading" id="modulo-5">
+      <p class="activities-label">MÓDULO 5</p>
+      <h2>Medios digitales de comunicación y colaboración</h2>
+      <a href="documento.html?archivo=03_Guia_Estudiantes%2FModulos_Individuales%2F05_Modulo_5_Medios_Comunicacion_y_ESI.md">📖 Leer el módulo 5 del manual</a>
+    </header>
+    <a class="back-to-modules" href="#elegir-modulo">↑ Elegir otro módulo</a>
+    <nav class="activity-jump" aria-label="Actividades del módulo 5">
+      <a href="#verificacion">Laboratorio de verificación</a>
+      <a href="#cuestionario-medios">Cuestionario del módulo 5</a>
+    </nav>
+
+    <section class="activity-card" id="verificacion" aria-labelledby="verificacion-title">
+      <h2 id="verificacion-title">🕵️ Laboratorio de verificación</h2>
+      <p>Los casos y las evidencias son ficticios, creados para practicar sin conexión; no son noticias reales. <a href="documento.html?archivo=04_Cuadernillo_Actividades%2F2_Trimestre%2FFicha_24_Periodismo_Digital_y_Desarmado_de_F.md">Ficha 24</a></p>
+      <form id="fact-form" class="activity-form" novalidate>
+        <label for="fact-case">Elegí un caso</label>
+        <select id="fact-case">
+          <option value="0">Caso 1: biblioteca escolar</option>
+          <option value="1">Caso 2: suspensión de clases</option>
+          <option value="2">Caso 3: taller escolar</option>
+          <option value="3">Caso 4: recreo extra</option>
+        </select>
+        <div class="fact-evidence">
+          <h3 id="fact-headline"></h3>
+          <p id="fact-message"></p>
+          <button type="button" id="fact-reveal" class="btn-detail activity-button" aria-expanded="false">Consultar evidencia</button>
+          <p id="fact-evidence" hidden></p>
+        </div>
+        <fieldset class="fact-checklist">
+          <legend>Aplicá los cinco pasos antes de elegir un veredicto</legend>
+          <label><input type="checkbox" name="fact-step"> Revisé quién publica la afirmación.</label>
+          <label><input type="checkbox" name="fact-step"> Revisé la fecha y el contexto.</label>
+          <label><input type="checkbox" name="fact-step"> Leí el mensaje completo, no solo el titular.</label>
+          <label><input type="checkbox" name="fact-step"> Contrasté la afirmación con la evidencia proporcionada.</label>
+          <label><input type="checkbox" name="fact-step"> Revisé si hay imágenes y su contexto; ante dudas, no reenviaría.</label>
+        </fieldset>
+        <label for="fact-verdict">Veredicto para este caso ficticio</label>
+        <select id="fact-verdict">
+          <option value="">Elegí una opción</option>
+          <option value="verdadera">Verdadera</option>
+          <option value="falsa">Falsa</option>
+          <option value="enganosa">Engañosa</option>
+          <option value="insuficiente">Información insuficiente</option>
+        </select>
+        <label for="fact-reason">¿Qué justifica tu conclusión?</label>
+        <select id="fact-reason">
+          <option value="">Elegí una justificación</option>
+          <option value="coincide">La evidencia coincide con el mensaje.</option>
+          <option value="contradice">La evidencia contradice el mensaje.</option>
+          <option value="alcance">El mensaje exagera el alcance de un hecho.</option>
+          <option value="falta">No hay suficiente evidencia para decidir.</option>
+        </select>
+        <button type="submit" class="btn-detail activity-button">Comprobar veredicto</button>
+      </form>
+      <p id="fact-result" class="activity-result" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="activity-card" id="cuestionario-medios" aria-labelledby="quiz-medios-title">
+      <h2 id="quiz-medios-title">📝 Autoevaluación del módulo 5</h2>
+      <p>Elegí una respuesta por pregunta. Podés cambiarla y recibirás una explicación. Esta práctica no tiene nota formal.</p>
+      <p id="storage-status-medios" class="storage-status" role="status" aria-live="polite"></p>
+      <form id="quiz-form-medios">
+        <div id="quiz-questions-medios"></div>
+        <p id="quiz-score-medios" class="quiz-score" role="status" aria-live="polite"></p>
+        <button id="quiz-reset-medios" class="btn-detail activity-button" type="button">Reiniciar cuestionario</button>
+      </form>
+    </section>
+    <a class="back-to-modules" href="#elegir-modulo">↑ Elegir otro módulo</a>
+    </div>
+
+    <div class="module-panel">
+    <header class="activities-intro module-heading" id="modulo-6">
+      <p class="activities-label">MÓDULO 6</p>
+      <h2>Alfabetización multimedia</h2>
+      <a href="documento.html?archivo=03_Guia_Estudiantes%2FModulos_Individuales%2F06_Modulo_6_Multimedia.md">📖 Leer el módulo 6 del manual</a>
+    </header>
+    <a class="back-to-modules" href="#elegir-modulo">↑ Elegir otro módulo</a>
+    <nav class="activity-jump" aria-label="Actividades del módulo 6">
+      <a href="#storyboard">Armá un storyboard</a>
+      <a href="#cuestionario-multimedia">Cuestionario del módulo 6</a>
+    </nav>
+    <section class="activity-card" id="storyboard" aria-labelledby="storyboard-title">
+      <h2 id="storyboard-title">🎬 Armá un storyboard</h2>
+      <p>Ordená tres escenas para contar una historia sobre el cuidado de la biblioteca. Describí qué ocurre y elegí sonido y transición. Usá las flechas de cada escena para cambiar el orden.</p>
+      <p class="activity-hint">No ingreses datos personales. Solo se guarda en este navegador si elegís «Guardar».</p>
+      <div id="story-scenes"></div>
+      <div class="activity-controls">
+        <button id="story-save" class="btn-detail activity-button" type="button">Guardar storyboard</button>
+        <button id="story-reset" class="btn-detail activity-button" type="button">Reiniciar storyboard</button>
+      </div>
+      <p id="story-result" class="activity-result" role="status" aria-live="polite"></p>
+    </section>
+    <section class="activity-card" id="cuestionario-multimedia" aria-labelledby="quiz-multimedia-title">
+      <h2 id="quiz-multimedia-title">📝 Autoevaluación del módulo 6</h2>
+      <p>Elegí una respuesta por pregunta. Podés cambiarla y recibirás una explicación. Esta práctica no tiene nota formal.</p>
+      <p id="storage-status-multimedia" class="storage-status" role="status" aria-live="polite"></p>
+      <form id="quiz-form-multimedia">
+        <div id="quiz-questions-multimedia"></div>
+        <p id="quiz-score-multimedia" class="quiz-score" role="status" aria-live="polite"></p>
+        <button id="quiz-reset-multimedia" class="btn-detail activity-button" type="button">Reiniciar cuestionario</button>
+      </form>
+    </section>
+    <a class="back-to-modules" href="#elegir-modulo">↑ Elegir otro módulo</a>
+    </div>
+
+    <div class="module-panel">
+    <header class="activities-intro module-heading" id="modulo-7">
+      <p class="activities-label">MÓDULO 7</p>
+      <h2>Ciudadanía digital</h2>
+      <a href="documento.html?archivo=03_Guia_Estudiantes%2FModulos_Individuales%2F07_Modulo_7_Ciudadania_Digital_e_IA.md">📖 Leer el módulo 7 del manual</a>
+    </header>
+    <a class="back-to-modules" href="#elegir-modulo">↑ Elegir otro módulo</a>
+    <nav class="activity-jump" aria-label="Actividades del módulo 7">
+      <a href="#contrasenas">Práctica de contraseñas</a>
+      <a href="#estafas">Identificá una estafa</a>
+      <a href="#cuestionario-ciudadania">Cuestionario del módulo 7</a>
+    </nav>
+    <section class="activity-card" id="contrasenas" aria-labelledby="contrasenas-title">
+      <h2 id="contrasenas-title">🔒 Práctica de contraseñas</h2>
+      <p><strong>Usá solo una contraseña inventada para esta práctica. No escribas contraseñas reales.</strong> El texto se analiza en esta página y no se guarda ni se envía. <a href="documento.html?archivo=04_Cuadernillo_Actividades%2F3_Trimestre%2FFicha_31_Huella_Digital_Privacidad_y_Soberan.md">Ficha 31</a></p>
+      <div class="activity-form">
+        <label for="password-practice">Contraseña ficticia</label>
+        <input id="password-practice" type="password" maxlength="128" autocomplete="off" spellcheck="false">
+        <button type="button" class="btn-detail activity-button" id="password-clear">Borrar texto</button>
+      </div>
+      <div id="password-result" class="activity-result" role="status" aria-live="polite">Escribí un ejemplo ficticio para revisar sus características.</div>
+      <p class="activity-hint">Cumplir estas características no garantiza seguridad ni detecta contraseñas conocidas o filtradas. En tus cuentas usá frases largas y únicas, un gestor de contraseñas y verificación en dos pasos cuando sea posible.</p>
+    </section>
+
+    <section class="activity-card" id="estafas" aria-labelledby="estafas-title">
+      <h2 id="estafas-title">🛡️ Identificá una estafa</h2>
+      <p>Examiná mensajes ficticios. Marcá las señales presentes y elegí qué hacer; si no hay ninguna de la lista, dejá las casillas sin marcar. Nunca ingreses contraseñas, códigos ni datos personales en esta actividad.</p>
+      <form id="scam-form" class="activity-form">
+        <label for="scam-case">Mensaje</label>
+        <select id="scam-case"><option value="0">Caso 1: aviso urgente</option><option value="1">Caso 2: premio inesperado</option><option value="2">Caso 3: invitación escolar</option></select>
+        <p id="scam-message" class="fact-evidence"></p>
+        <fieldset class="fact-checklist">
+          <legend>¿Qué señales aparecen? Marcá todas las que correspondan.</legend>
+          <label><input type="checkbox" name="scam-signal" value="urgencia"> Presión o urgencia</label>
+          <label><input type="checkbox" name="scam-signal" value="secreto"> Pedido de contraseña o código</label>
+          <label><input type="checkbox" name="scam-signal" value="enlace"> Enlace desconocido</label>
+          <label><input type="checkbox" name="scam-signal" value="premio"> Premio inesperado</label>
+        </fieldset>
+        <label for="scam-action">¿Cómo actuarías?</label>
+        <select id="scam-action"><option value="">Elegí una opción</option><option value="verificar">No seguir enlaces ni dar datos; verificar por un canal conocido</option><option value="responder">Responder con los datos solicitados</option><option value="reenviar">Reenviar el mensaje a otras personas</option></select>
+        <button class="btn-detail activity-button" type="submit">Revisar decisión</button>
+      </form>
+      <p id="scam-result" class="activity-result" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="activity-card" id="cuestionario-ciudadania" aria-labelledby="quiz-ciudadania-title">
+      <h2 id="quiz-ciudadania-title">📝 Autoevaluación del módulo 7</h2>
+      <p>Elegí una respuesta por pregunta. Podés cambiarla y recibirás una explicación. Esta práctica no tiene nota formal.</p>
+      <p id="storage-status-ciudadania" class="storage-status" role="status" aria-live="polite"></p>
+      <form id="quiz-form-ciudadania">
+        <div id="quiz-questions-ciudadania"></div>
+        <p id="quiz-score-ciudadania" class="quiz-score" role="status" aria-live="polite"></p>
+        <button id="quiz-reset-ciudadania" class="btn-detail activity-button" type="button">Reiniciar cuestionario</button>
+      </form>
+    </section>
+    <a class="back-to-modules" href="#elegir-modulo">↑ Elegir otro módulo</a>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p><strong>EES N° 33 “16 de septiembre” • José C. Paz</strong></p>
+    <p>NTICx 4° 1° • Ciclo Lectivo 2026</p>
+  </footer>
+  <script src="theme.js"></script>
+  <script src="actividades.js"></script>
+  <script src="misiones.js"></script>
+  <script src="offline.js"></script>
+</body>
+</html>
